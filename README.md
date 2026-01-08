@@ -15,22 +15,6 @@
 
 ---
 
-## 🌐 Connect With Me
-
-<p align="center">
-  <a href="https://linkedin.com/in/samson-southafeng" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
-  </a>
-  <a href="mailto:southafeng@gmail.com">
-    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
-  </a>
-  <a href="https://funnyvalentine69.github.io/samson_portfolio/" target="_blank">
-    <img src="https://img.shields.io/badge/Portfolio-A855F7?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Portfolio" />
-  </a>
-</p>
-
----
-
 ## 💻 Tech Stack
 
 ### Core Languages
@@ -154,17 +138,19 @@ I bring a unique perspective combining:
 
 ---
 
-<p align="center">
-  <img src="https://visitcount.itsvg.in/api?id=FunnyValentine69&icon=0&color=6" alt="Profile Views" />
-</p>
+## 🌐 Connect With Me
 
 <p align="center">
-  <i>"The best way to predict the future is to build it—with AI as your co-pilot."</i>
+  <a href="https://linkedin.com/in/samson-southafeng" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+  </a>
+  <a href="mailto:southafeng@gmail.com">
+    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+  </a>
+  <a href="https://funnyvalentine69.github.io/samson_portfolio/" target="_blank">
+    <img src="https://img.shields.io/badge/Portfolio-A855F7?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Portfolio" />
+  </a>
 </p>
 
 ---
-
-<div align="center">
-  <sub>Built with ❤️ using AI-assisted development | Updated January 2026</sub>
-</div>
 
