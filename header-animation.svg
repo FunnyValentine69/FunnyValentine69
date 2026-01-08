@@ -133,7 +133,7 @@
   
   <!-- Bottom tagline -->
   <text x="470" y="188" text-anchor="middle" font-family="'Fira Code', monospace" font-size="12" fill="#666">
-    Building with AI as My Co-Pilot 🚀
+    Healthcare + Tech = Impact 💡
     <animate attributeName="fill" values="#666;#A855F7;#666" dur="4s" repeatCount="indefinite"/>
   </text>
   
