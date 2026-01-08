@@ -124,17 +124,6 @@ class Developer:
 
 <br/>
 
-```
-┌─────────────────────┐
-│   AI-ASSISTED DEV   │
-├─────────────────────┤
-│ ▸ Claude Code CLI   │
-│ ▸ GitHub Copilot    │
-│ ▸ Cursor IDE        │
-│ ▸ Ollama Local LLM  │
-└─────────────────────┘
-```
-
 </td>
 </tr>
 </table>
@@ -195,18 +184,6 @@ I bring a unique perspective combining:
 
 <img src="https://readme-typing-svg.herokuapp.com?font=Press+Start+2P&size=10&duration=2000&pause=500&color=A855F7&center=true&vCenter=true&multiline=true&width=200&height=180&lines=%F0%9F%8E%AE+150%2B+Champions;%F0%9F%8C%8D+Global+Thinker;%F0%9F%8F%A5+Healthcare+Pro;%F0%9F%A4%96+AI+Pioneer;%E2%8C%A8%EF%B8%8F+100%2B+WPM" alt="Fun Facts Animation"/>
 
-<br/>
-
-```
-  ╔══════════════╗
-  ║  GAMER CRED  ║
-  ╠══════════════╣
-  ║ 🏆 LoL Club  ║
-  ║    President ║
-  ║ 📊 150+ Champs║
-  ║ ⚡ 750 Skills ║
-  ╚══════════════╝
-```
 
 </td>
 </tr>
