@@ -86,9 +86,9 @@
 
 ## 💭 My Development Philosophy
 
-<table border=0>
+<table>
 <tr>
-<td width="50" valign="center">
+<td valign="center">
 
 ```python
 class Developer:
@@ -112,8 +112,8 @@ class Developer:
         return "10x productivity achieved ✨"
 ```
 
-</td border=0>
-<td style="width:100%;" width="500" align="center">
+</td>
+<td width="500" align="center">
 
 <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=14&duration=2500&pause=800&color=A855F7&center=true&vCenter=true&multiline=true&width=320&height=200&lines=%F0%9F%A7%A0+Think+Different;%F0%9F%A4%96+Build+with+AI;%F0%9F%9A%80+Ship+Fast;%F0%9F%94%81+Iterate+Always;%E2%9C%A8+10x+Productivity" alt="Philosophy Animation"/>
 
