@@ -19,7 +19,7 @@
 
 <table>
 <tr>
-<td width="50%" valign="top">
+<td width="60%" valign="top">
 
 ### 💻 Tech Stack
 
@@ -41,7 +41,7 @@
 ![Ollama](https://img.shields.io/badge/Ollama-000000?style=for-the-badge&logo=ollama&logoColor=white)
 
 </td>
-<td width="50%" valign="top">
+<td width="40%" valign="top">
 
 ### 📊 GitHub Stats
 
@@ -61,13 +61,7 @@
 
 <table>
 <tr>
-<td width="35%" align="center">
-
-<img src="./Maid cafe animation.svg" width="280" alt="Maid Cafe Animation"/>
-
-</td>
-<td width="65%" valign="top">
-
+<td width="60%" valign="top">
 
 ### ☕ [Maid Cafe Dating Sim](https://github.com/FunnyValentine69/maid-cafe-dating-sim)
 
@@ -82,6 +76,11 @@
 **Tech Stack:** `Python` `Ollama` `Rich Library`
 
 [![Repo](https://img.shields.io/badge/View_Repo-A855F7?style=for-the-badge&logo=github&logoColor=white)](https://github.com/FunnyValentine69/maid-cafe-dating-sim)
+
+</td>
+<td width="40%" align="center">
+
+<img src="./maid-cafe-animation.svg" width="280" alt="Maid Cafe Animation"/>
 
 </td>
 </tr>
@@ -122,8 +121,6 @@ class Developer:
 
 <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=14&duration=2500&pause=800&color=A855F7&center=true&vCenter=true&multiline=true&width=320&height=200&lines=%F0%9F%A7%A0+Think+Different;%F0%9F%A4%96+Build+with+AI;%F0%9F%9A%80+Ship+Fast;%F0%9F%94%81+Iterate+Always;%E2%9C%A8+10x+Productivity" alt="Philosophy Animation"/>
 
-<br/>
-
 </td>
 </tr>
 </table>
@@ -134,7 +131,7 @@ class Developer:
 
 <table>
 <tr>
-<td width="50%" valign="top">
+<td width="60%" valign="top">
 
 ### 🎯 Current Focus
 
@@ -145,7 +142,7 @@ class Developer:
 - 🌍 Creating tech solutions for social impact
 
 </td>
-<td width="50%" valign="top">
+<td width="40%" valign="top">
 
 ### 🌟 Unique Background
 
@@ -168,7 +165,7 @@ I bring a unique perspective combining:
 
 <table>
 <tr>
-<td width="65%" valign="top">
+<td width="60%" valign="top">
 
 - 🎮 Memorized **150+ League of Legends champions** (each with 5 skills!)
 - 🌍 International relations enthusiast with global perspective
@@ -180,10 +177,9 @@ I bring a unique perspective combining:
 **Why it matters:** This cross-domain expertise helps me build solutions that understand real user needs, handle complex data, and create meaningful impact.
 
 </td>
-<td width="35%" align="center">
+<td width="40%" align="center">
 
 <img src="https://readme-typing-svg.herokuapp.com?font=Press+Start+2P&size=10&duration=2000&pause=500&color=A855F7&center=true&vCenter=true&multiline=true&width=200&height=180&lines=%F0%9F%8E%AE+150%2B+Champions;%F0%9F%8C%8D+Global+Thinker;%F0%9F%8F%A5+Healthcare+Pro;%F0%9F%A4%96+AI+Pioneer;%E2%8C%A8%EF%B8%8F+100%2B+WPM" alt="Fun Facts Animation"/>
-
 
 </td>
 </tr>
@@ -217,7 +213,22 @@ I bring a unique perspective combining:
       alt="Portfolio"
     />
   </a>
+  &nbsp;&nbsp;
+  <a href="https://github.com/FunnyValentine69" target="_blank">
+    <img 
+      src="https://img.shields.io/badge/GitHub-FunnyValentine69-181717?style=for-the-badge&logo=github&logoColor=white"
+      height="40"
+      alt="GitHub"
+    />
+  </a>
+</p>
 
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=FunnyValentine69&label=Profile%20Views&color=A855F7&style=for-the-badge" alt="Profile Views" />
+</p>
 
 ---
 
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=14&duration=4000&pause=1000&color=A855F7&center=true&vCenter=true&width=600&lines=Thanks+for+visiting!+%F0%9F%91%8B;Let's+build+something+amazing+together!+%F0%9F%9A%80;AI-Assisted+Development+is+the+Future+%F0%9F%A4%96" alt="Footer Typing SVG" />
+</p>
