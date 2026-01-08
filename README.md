@@ -7,7 +7,7 @@
 
 ## Hi, I'm Samson 👋
 
-I'm a healthcare professional turned tech enthusiast with 5+ years of clinical experience working alongside physicians in high-pressure environments like the Emergency Department. Now I'm channeling that attention to detail into AI-assisted development.
+I'm a healthcare professional turned tech enthusiast with 10+ years of clinical experience working alongside physicians in high-pressure environments like the Emergency Department. Now I'm channeling that attention to detail into AI-assisted development.
 Currently pursuing my MPH in Epidemiology and MBA in Finance & International Business, I'm passionate about building tech solutions that improve health outcomes and create wealth in underserved communities.
 When I'm not coding with Claude as my co-pilot, you might find me geeking out over international relations or flexing my 150+ League of Legends champion knowledge 🎮
 
@@ -134,7 +134,7 @@ class Developer:
     />
   </a>
   &nbsp;&nbsp;
-  <a href="mailto:samson.southafeng@wsu.edu">
+  <a href="mailto:taichou@wsu.edu">
     <img 
       src="https://img.shields.io/badge/Email-samson.southafeng%40wsu.edu-981E32?style=for-the-badge&logo=gmail&logoColor=white"
       height="40"
