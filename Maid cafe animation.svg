@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200">
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="50%" style="stop-color:#16213e"/>
+      <stop offset="100%" style="stop-color:#0f0f23"/>
+    </linearGradient>
+    
+    <!-- Glow effect -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Pulse animation for hearts -->
+    <animate id="pulse" attributeName="r" values="3;5;3" dur="1s" repeatCount="indefinite"/>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="280" height="200" fill="url(#bgGrad)" rx="10"/>
+  
+  <!-- Border glow -->
+  <rect width="276" height="196" x="2" y="2" fill="none" stroke="#A855F7" stroke-width="2" rx="8" opacity="0.6">
+    <animate attributeName="stroke-opacity" values="0.3;0.8;0.3" dur="2s" repeatCount="indefinite"/>
+  </rect>
+  
+  <!-- Coffee cup -->
+  <g transform="translate(140, 85)">
+    <!-- Cup body -->
+    <path d="M-25,0 L-20,35 L20,35 L25,0 Z" fill="#FF69B4" opacity="0.9">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="3s" repeatCount="indefinite"/>
+    </path>
+    <!-- Cup handle -->
+    <path d="M25,5 Q40,5 40,17 Q40,30 25,30" fill="none" stroke="#FF69B4" stroke-width="4"/>
+    <!-- Steam lines -->
+    <path d="M-10,-10 Q-15,-25 -5,-30" fill="none" stroke="#A855F7" stroke-width="2" opacity="0.7">
+      <animate attributeName="d" values="M-10,-10 Q-15,-25 -5,-30;M-10,-10 Q-5,-25 -15,-35;M-10,-10 Q-15,-25 -5,-30" dur="2s" repeatCount="indefinite"/>
+    </path>
+    <path d="M0,-10 Q5,-25 -5,-35" fill="none" stroke="#A855F7" stroke-width="2" opacity="0.7">
+      <animate attributeName="d" values="M0,-10 Q5,-25 -5,-35;M0,-10 Q-5,-25 5,-40;M0,-10 Q5,-25 -5,-35" dur="2.5s" repeatCount="indefinite"/>
+    </path>
+    <path d="M10,-10 Q15,-25 5,-30" fill="none" stroke="#A855F7" stroke-width="2" opacity="0.7">
+      <animate attributeName="d" values="M10,-10 Q15,-25 5,-30;M10,-10 Q5,-25 15,-35;M10,-10 Q15,-25 5,-30" dur="1.8s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  
+  <!-- Floating hearts -->
+  <g filter="url(#glow)">
+    <text x="50" y="60" font-size="16" fill="#FF69B4">
+      ❤
+      <animate attributeName="y" values="60;50;60" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite"/>
+    </text>
+    <text x="220" y="70" font-size="14" fill="#A855F7">
+      💜
+      <animate attributeName="y" values="70;55;70" dur="2.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="2.5s" repeatCount="indefinite"/>
+    </text>
+    <text x="80" y="150" font-size="12" fill="#FF69B4">
+      💕
+      <animate attributeName="y" values="150;140;150" dur="1.8s" repeatCount="indefinite"/>
+    </text>
+    <text x="190" y="145" font-size="12" fill="#A855F7">
+      ✨
+      <animate attributeName="y" values="145;135;145" dur="2.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="1.5s" repeatCount="indefinite"/>
+    </text>
+  </g>
+  
+  <!-- Title text -->
+  <text x="140" y="165" text-anchor="middle" font-family="'Courier New', monospace" font-size="14" fill="#FF69B4" font-weight="bold" filter="url(#glow)">
+    ☕ Maid Cafe Dating Sim
+    <animate attributeName="fill" values="#FF69B4;#A855F7;#FF69B4" dur="3s" repeatCount="indefinite"/>
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="140" y="185" text-anchor="middle" font-family="'Courier New', monospace" font-size="10" fill="#888">
+    AI-Powered • Terminal Game
+  </text>
+  
+  <!-- Corner decorations -->
+  <text x="15" y="25" font-size="14" fill="#A855F7" opacity="0.5">✧</text>
+  <text x="255" y="25" font-size="14" fill="#A855F7" opacity="0.5">✧</text>
+  <text x="15" y="190" font-size="14" fill="#A855F7" opacity="0.5">✧</text>
+  <text x="255" y="190" font-size="14" fill="#A855F7" opacity="0.5">✧</text>
+  
+  <!-- Blinking cursor effect -->
+  <rect x="200" y="30" width="8" height="2" fill="#A855F7">
+    <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+  </rect>
+</svg>
