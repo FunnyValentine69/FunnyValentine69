@@ -15,7 +15,7 @@
 
 ---
 
-## 💻 Tech Stack & 📊 GitHub Stats
+## 💻 Skills
 
 <table>
 <tr>
