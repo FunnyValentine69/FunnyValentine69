@@ -17,7 +17,7 @@
 
 ## 💻 Skills
 
-<table>
+<table width="100%">
 <tr>
 <td width="60%" valign="top">
 
@@ -55,7 +55,7 @@
 
 ## 🚀 Featured Projects
 
-<table>
+<table width="100%">
 <tr>
 <td width="60%" valign="top">
 
@@ -86,7 +86,7 @@
 
 ## 💭 My Development Philosophy
 
-<table>
+<table width="100%">
 <tr>
 <td width="60%" valign="top">
 
@@ -123,10 +123,9 @@ class Developer:
 
 ---
 
-
 ## 🏆 Fun Facts
 
-<table>
+<table width="100%">
 <tr>
 <td width="60%" valign="top">
 
@@ -168,4 +167,3 @@ class Developer:
       alt="WSU Email"
     />
   </a>
----
