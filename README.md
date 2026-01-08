@@ -11,7 +11,7 @@ I'm a healthcare professional turned tech enthusiast with 5+ years of clinical e
 Currently pursuing my MPH in Epidemiology and MBA in Finance & International Business, I'm passionate about building tech solutions that improve health outcomes and create wealth in underserved communities.
 When I'm not coding with Claude as my co-pilot, you might find me geeking out over international relations or flexing my 150+ League of Legends champion knowledge 🎮
 
-📍 Vancouver, WA | 🌐 <a href="(https://funnyvalentine69.github.io/samson_portfolio/)">View My Portfolio</a></li>
+📍 Vancouver, WA | 🌐 [View My Portfolio](https://funnyvalentine69.github.io/samson_portfolio/)
 
 ---
 
