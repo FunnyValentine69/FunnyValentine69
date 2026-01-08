@@ -1,8 +1,9 @@
+
 <p align="center">
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=32&duration=2800&pause=2000&color=A855F7&center=true&vCenter=true&width=940&lines=Welcome+to+My+Dev+Journey+%F0%9F%9A%80;Healthcare+%E2%86%92+Business+%E2%86%92+Tech;Building+with+AI+as+My+Co-Pilot" alt="Typing SVG" />
 </p>
 
-<table>
+<table width="100%">
 <tr>
 <td width="60%">
 <h2>👋 Hey, I'm <span style="color:#A855F7;">Samson</span>!</h2>
@@ -39,7 +40,7 @@ graph LR
 
 ---
 
-<table>
+<table width="100%">
 <tr>
   <td valign="top" width="55%">
     
@@ -76,11 +77,11 @@ graph LR
 ## 📊 GitHub Stats
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=FunnyValentine69&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=A855F7&icon_color=A855F7&text_color=C9D1D9" alt="GitHub Stats" width="100%" />
+  <img src="https://github-readme-stats.vercel.app/api?username=FunnyValentine69&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117&title_color=A855F7&icon_color=A855F7&text_color=C9D1D9&count_private=true" alt="GitHub Stats" width="100%" />
   <br /><br />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=FunnyValentine69&theme=tokyonight&hide_border=true&background=0D1117&ring=A855F7&fire=A855F7&currStreakLabel=A855F7" alt="GitHub Streak" width="100%" />
+  <img src="https://streak-stats.demolab.com?user=FunnyValentine69&theme=radical&hide_border=true&background=0D1117&ring=A855F7&fire=A855F7&currStreakLabel=A855F7" alt="GitHub Streak" width="100%" />
   <br /><br />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=FunnyValentine69&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=A855F7&text_color=C9D1D9" alt="Top Languages" width="100%" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=FunnyValentine69&layout=compact&theme=radical&hide_border=true&bg_color=0D1117&title_color=A855F7&text_color=C9D1D9&langs_count=8" alt="Top Languages" width="100%" />
 </div>
 
   </td>
@@ -100,7 +101,7 @@ graph LR
 
 ### 🎮 Featured Project
 
-<table>
+<table width="100%">
 <tr>
 <td width="70%">
 
@@ -164,7 +165,7 @@ class Developer:
 
 ## 🌟 Skills Beyond Code
 
-<table>
+<table width="100%">
 <tr>
 <td width="50%">
 
