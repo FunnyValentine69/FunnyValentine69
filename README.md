@@ -17,9 +17,9 @@
 
 ## 💻 Skills
 
-<table style="border-width: 0;">
-<tr style="border-width: 0;">
-<td style="width:50%;" width="600" valign="center">
+<table>
+<tr>
+<td style="width:50%;" width="660" valign="center">
 
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
@@ -55,9 +55,9 @@
 
 ## 🚀 Featured Projects
 
-<table border="0">
+<table>
 <tr>
-<td style="width:50%;" width="600" valign="top">
+<td style="width:50%;" width="640" valign="top">
 
 ### ☕ [Maid Cafe Dating Sim](https://github.com/FunnyValentine69/maid-cafe-dating-sim)
 
@@ -88,7 +88,7 @@
 
 <table>
 <tr>
-<td valign="center">
+<td style="width:5%;" width="10" valign="center">
 
 ```python
 class Developer:
@@ -113,7 +113,7 @@ class Developer:
 ```
 
 </td>
-<td width="500" align="center">
+<td width="1000" align="center">
 
 <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=14&duration=2500&pause=800&color=A855F7&center=true&vCenter=true&multiline=true&width=320&height=200&lines=%F0%9F%A7%A0+Think+Different;%F0%9F%A4%96+Build+with+AI;%F0%9F%9A%80+Ship+Fast;%F0%9F%94%81+Iterate+Always;%E2%9C%A8+10x+Productivity" alt="Philosophy Animation"/>
 
