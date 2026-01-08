@@ -123,32 +123,6 @@ class Developer:
 
 ---
 
-## 🏆 Fun Facts
-
-<table border=0>
-<tr border=0>
-<td style="width:50%;" width="600" valign="center" border="0" >
-
-- 🎮 Memorized **150+ League of Legends champions** (each with 5 skills!)
-- 🌍 International relations enthusiast with global perspective
-- 🏥 Trained healthcare professionals across multiple specialties
-- 🤖 Early adopter of AI-assisted development workflows
-- ⌨️ **100+ WPM** typing speed for maximum productivity
-- 🎯 ADHD-PI superpower: hyperfocus on interesting problems
-
-**Why it matters:** This cross-domain expertise helps me build solutions that understand real user needs, handle complex data, and create meaningful impact.
-
-</td>
-<td style="width:100%;" width="500" border=0 align="center">
-
-<img src="https://readme-typing-svg.herokuapp.com?font=Press+Start+2P&size=10&duration=2000&pause=500&color=A855F7&center=true&vCenter=true&multiline=true&width=200&height=180&lines=%F0%9F%8E%AE+150%2B+Champions;%F0%9F%8C%8D+Global+Thinker;%F0%9F%8F%A5+Healthcare+Pro;%F0%9F%A4%96+AI+Pioneer;%E2%8C%A8%EF%B8%8F+100%2B+WPM" width="500" alt="Fun Facts Animation"/>
-
-</td>
-</tr>
-</table>
-
----
-
 ## 📡 Network & Socials
 
 <p align="center">
