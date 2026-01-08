@@ -11,11 +11,18 @@
 💡 **Mission:** Building 10+ portfolio projects to master modern dev workflows  
 🎯 **Focus:** Healthcare Tech, FinTech, and Social Impact Solutions  
 📍 **Location:** Vancouver, WA  
-🌐 **Portfolio:** [Checkout My Portfolio](https://funnyvalentine69.github.io/samson_portfolio/)
+🌐 **Portfolio:** [Samson's Portfolio](https://funnyvalentine69.github.io/samson_portfolio/)
 
 ---
 
-## 💻 Tech Stack
+## 💻 Tech Stack & 📊 GitHub Stats
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### 💻 Tech Stack
+
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
@@ -31,31 +38,12 @@
 ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
 ![Apache Kafka](https://img.shields.io/badge/Apache%20Kafka-000?style=for-the-badge&logo=apachekafka)
 ![Apache Airflow](https://img.shields.io/badge/Apache%20Airflow-017CEE?style=for-the-badge&logo=Apache%20Airflow&logoColor=white)
-![Chart.js](https://img.shields.io/badge/chart.js-F5788D.svg?style=for-the-badge&logo=chart.js&logoColor=white)
-![.Net](https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white)
-![Apache Maven](https://img.shields.io/badge/Apache%20Maven-C71A36?style=for-the-badge&logo=Apache%20Maven&logoColor=white)
-![Jenkins](https://img.shields.io/badge/jenkins-%232C5263.svg?style=for-the-badge&logo=jenkins&logoColor=white)
-![Nginx](https://img.shields.io/badge/nginx-%23009639.svg?style=for-the-badge&logo=nginx&logoColor=white)
 ![Ollama](https://img.shields.io/badge/Ollama-000000?style=for-the-badge&logo=ollama&logoColor=white)
 
----
+</td>
+<td width="50%" valign="top">
 
-## 🚀 Featured Projects
-
-### ☕ [Maid Cafe Dating Sim](https://github.com/FunnyValentine69/maid-cafe-dating-sim)
-> AI-powered terminal dating game with dynamic NPC conversations
-
-**Features:**
-- 🤖 Local LLM integration for natural dialogue
-- 🎭 Dynamic character personalities
-- 💬 Natural language processing
-- 🎨 Rich terminal UI
-
-**Tech Stack:** Python, Ollama, Rich Library
-
----
-
-## 📊 GitHub Stats
+### 📊 GitHub Stats
 
 <p align="center">
   <a href="https://git.io/awesome-stats-card">
@@ -71,9 +59,54 @@
   <img src="http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=FunnyValentine69&theme=radical" alt="Top Languages" />
 </p>
 
+</td>
+</tr>
+</table>
+
+---
+
+## 🚀 Featured Projects
+
+<table>
+<tr>
+<td width="35%" align="center">
+
+<img src="https://raw.githubusercontent.com/FunnyValentine69/FunnyValentine69/main/assets/maid-cafe-animation.svg" width="280" alt="Maid Cafe Animation"/>
+
+<!-- If the above doesn't work, use this placeholder animated SVG -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=18&duration=3000&pause=1000&color=FF69B4&center=true&vCenter=true&multiline=true&repeat=false&width=280&height=150&lines=%E2%98%95+Maid+Cafe;%F0%9F%92%AC+Dating+Sim;%F0%9F%A4%96+AI+Powered;%F0%9F%8E%AE+Terminal+Game">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=18&duration=3000&pause=1000&color=A855F7&center=true&vCenter=true&multiline=true&repeat=false&width=280&height=150&lines=%E2%98%95+Maid+Cafe;%F0%9F%92%AC+Dating+Sim;%F0%9F%A4%96+AI+Powered;%F0%9F%8E%AE+Terminal+Game" alt="Maid Cafe Typing Animation"/>
+</picture>
+
+</td>
+<td width="65%" valign="top">
+
+### ☕ [Maid Cafe Dating Sim](https://github.com/FunnyValentine69/maid-cafe-dating-sim)
+
+> AI-powered terminal dating game with dynamic NPC conversations
+
+**Features:**
+- 🤖 Local LLM integration for natural dialogue
+- 🎭 Dynamic character personalities  
+- 💬 Natural language processing
+- 🎨 Rich terminal UI
+
+**Tech Stack:** `Python` `Ollama` `Rich Library`
+
+[![Repo](https://img.shields.io/badge/View_Repo-A855F7?style=for-the-badge&logo=github&logoColor=white)](https://github.com/FunnyValentine69/maid-cafe-dating-sim)
+
+</td>
+</tr>
+</table>
+
 ---
 
 ## 💭 My Development Philosophy
+
+<table>
+<tr>
+<td width="60%" valign="top">
 
 ```python
 class Developer:
@@ -84,8 +117,10 @@ class Developer:
     
     def work_smarter_not_harder(self):
         """
-        I don't just write code—I architect solutions with AI as my pair programmer.
-        The future of development is collaborative, and I'm here for it.
+        I don't just write code—I architect solutions 
+        with AI as my pair programmer.
+        The future of development is collaborative, 
+        and I'm here for it.
         """
         while self.learning:
             self.leverage_ai_tools()
@@ -95,9 +130,37 @@ class Developer:
         return "10x productivity achieved ✨"
 ```
 
+</td>
+<td width="40%" align="center">
+
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=14&duration=2500&pause=800&color=A855F7&center=true&vCenter=true&multiline=true&width=320&height=200&lines=%F0%9F%A7%A0+Think+Different;%F0%9F%A4%96+Build+with+AI;%F0%9F%9A%80+Ship+Fast;%F0%9F%94%81+Iterate+Always;%E2%9C%A8+10x+Productivity" alt="Philosophy Animation"/>
+
+<br/>
+
+```
+┌─────────────────────┐
+│   AI-ASSISTED DEV   │
+├─────────────────────┤
+│ ▸ Claude Code CLI   │
+│ ▸ GitHub Copilot    │
+│ ▸ Cursor IDE        │
+│ ▸ Ollama Local LLM  │
+└─────────────────────┘
+```
+
+</td>
+</tr>
+</table>
+
 ---
 
-## 🎯 Current Focus
+## 🎯 Current Focus & 🌟 Unique Background
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### 🎯 Current Focus
 
 - 🔨 Building 10+ portfolio projects
 - 📚 Learning React and modern frontend
@@ -105,9 +168,10 @@ class Developer:
 - 💼 Completing MPH + MBA programs
 - 🌍 Creating tech solutions for social impact
 
----
+</td>
+<td width="50%" valign="top">
 
-## 🌟 Unique Background
+### 🌟 Unique Background
 
 **From Medical Scribe to Developer**
 
@@ -118,32 +182,93 @@ I bring a unique perspective combining:
 - 🧬 Public health insights from MPH program
 - 🎮 Team leadership (former LoL club president!)
 
-**Why it matters:** This cross-domain expertise helps me build solutions that understand real user needs, handle complex data, and create meaningful impact.
+</td>
+</tr>
+</table>
 
 ---
 
 ## 🏆 Fun Facts
 
-- 🎮 Memorized 150+ League of Legends champions (each with 5 skills!)
+<table>
+<tr>
+<td width="65%" valign="top">
+
+- 🎮 Memorized **150+ League of Legends champions** (each with 5 skills!)
 - 🌍 International relations enthusiast with global perspective
 - 🏥 Trained healthcare professionals across multiple specialties
 - 🤖 Early adopter of AI-assisted development workflows
+- ⌨️ **100+ WPM** typing speed for maximum productivity
+- 🎯 ADHD-PI superpower: hyperfocus on interesting problems
+
+**Why it matters:** This cross-domain expertise helps me build solutions that understand real user needs, handle complex data, and create meaningful impact.
+
+</td>
+<td width="35%" align="center">
+
+<img src="https://readme-typing-svg.herokuapp.com?font=Press+Start+2P&size=10&duration=2000&pause=500&color=A855F7&center=true&vCenter=true&multiline=true&width=200&height=180&lines=%F0%9F%8E%AE+150%2B+Champions;%F0%9F%8C%8D+Global+Thinker;%F0%9F%8F%A5+Healthcare+Pro;%F0%9F%A4%96+AI+Pioneer;%E2%8C%A8%EF%B8%8F+100%2B+WPM" alt="Fun Facts Animation"/>
+
+<br/>
+
+```
+  ╔══════════════╗
+  ║  GAMER CRED  ║
+  ╠══════════════╣
+  ║ 🏆 LoL Club  ║
+  ║    President ║
+  ║ 📊 150+ Champs║
+  ║ ⚡ 750 Skills ║
+  ╚══════════════╝
+```
+
+</td>
+</tr>
+</table>
 
 ---
 
-## 🌐 Connect With Me
+## 📡 Network & Socials
 
 <p align="center">
   <a href="https://linkedin.com/in/samson-southafeng" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+    <img 
+      src="https://img.shields.io/badge/LinkedIn-samson--southafeng-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"
+      height="40"
+      alt="LinkedIn"
+    />
   </a>
-  <a href="mailto:southafeng@gmail.com">
-    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+  &nbsp;&nbsp;
+  <a href="mailto:samson.southafeng@wsu.edu">
+    <img 
+      src="https://img.shields.io/badge/Email-samson.southafeng%40wsu.edu-981E32?style=for-the-badge&logo=gmail&logoColor=white"
+      height="40"
+      alt="WSU Email"
+    />
   </a>
+  &nbsp;&nbsp;
   <a href="https://funnyvalentine69.github.io/samson_portfolio/" target="_blank">
-    <img src="https://img.shields.io/badge/Portfolio-A855F7?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Portfolio" />
+    <img 
+      src="https://img.shields.io/badge/Portfolio-samson's_portfolio-A855F7?style=for-the-badge&logo=google-chrome&logoColor=white"
+      height="40"
+      alt="Portfolio"
+    />
   </a>
+  &nbsp;&nbsp;
+  <a href="https://github.com/FunnyValentine69" target="_blank">
+    <img 
+      src="https://img.shields.io/badge/GitHub-FunnyValentine69-181717?style=for-the-badge&logo=github&logoColor=white"
+      height="40"
+      alt="GitHub"
+    />
+  </a>
+</p>
+
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=FunnyValentine69&label=Profile%20Views&color=A855F7&style=for-the-badge" alt="Profile Views" />
 </p>
 
 ---
 
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=14&duration=4000&pause=1000&color=A855F7&center=true&vCenter=true&width=600&lines=Thanks+for+visiting!+%F0%9F%91%8B;Let's+build+something+amazing+together!+%F0%9F%9A%80;AI-Assisted+Development+is+the+Future+%F0%9F%A4%96" alt="Footer Typing SVG" />
+</p>
