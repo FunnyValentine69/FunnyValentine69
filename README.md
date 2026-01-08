@@ -17,8 +17,8 @@
 
 ## 💻 Skills
 
-<table border="0">
-<tr>
+<table style="border-width: 0;">
+<tr style="border-width: 0;">
 <td style="width:50%;" width="600" valign="center">
 
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
