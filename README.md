@@ -3,6 +3,11 @@
   <img src="./header-animation.svg" width="940" alt="Samson's Dev Journey" />
 </p>
 
+
+<p align="right">
+  <img src="https://visitor-badge.laobi.icu/badge?page_id=FunnyValentine69.FunnyValentine69" alt="Profile Views" />
+</p>
+
 ---
 
 ## Hi, I'm Samson 👋
