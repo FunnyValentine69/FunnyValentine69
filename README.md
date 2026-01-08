@@ -57,7 +57,9 @@
 ## 📊 GitHub Stats
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=FunnyValentine69&theme=radical&hide_border=false&include_all_commits=true&count_private=true" alt="GitHub Stats" />
+  <a href="https://git.io/awesome-stats-card">
+    <img src="https://awesome-github-stats.azurewebsites.net/user-stats/FunnyValentine69?cardType=level&theme=radical&Background=0D1117&Text=C9D1D9&Title=A855F7&Ring=A855F7&preferLogin=false" alt="GitHub Stats" />
+  </a>
 </p>
 
 <p align="center">
