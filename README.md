@@ -1,4 +1,3 @@
-
 <p align="center">
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=32&duration=2800&pause=2000&color=A855F7&center=true&vCenter=true&width=940&lines=Welcome+to+My+Dev+Journey+%F0%9F%9A%80;Healthcare+%E2%86%92+Business+%E2%86%92+Tech;Building+with+AI+as+My+Co-Pilot" alt="Typing SVG" />
 </p>
@@ -24,6 +23,10 @@
 
 ---
 
+<table width="100%">
+<tr>
+<td>
+
 ## 🎓 My Unique Journey
 
 ```mermaid
@@ -37,6 +40,10 @@ graph LR
 ```
 
 **From Hospital to Code:** I've spent years documenting medical data under pressure, managing clinical workflows, and training healthcare teams. Now I'm channeling that precision, attention to detail, and systems thinking into software development—with AI as my force multiplier.
+
+</td>
+</tr>
+</table>
 
 ---
 
