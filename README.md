@@ -3,9 +3,8 @@
   <img src="./header-animation.svg" width="940" alt="Samson's Dev Journey" />
 </p>
 
-
 <p align="right">
-<img src="[https://api.visitorbadge.io/api/visitors?path=FunnyValentine69.FunnyValentine69&label=PROFILE%20VIEWS&countColor=%2348BB78&style=flat](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2FFunnyValentine69&label=Profile%20Views&countColor=%23263759)" alt="Profile Views" />
+  <img src="https://api.visitorbadge.io/api/visitors?path=SuperGokou.SuperGokou&label=Profile%20Views&countColor=%23263759" alt="Profile Views" />
 </p>
 
 
