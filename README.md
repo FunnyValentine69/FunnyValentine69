@@ -51,14 +51,6 @@
   </a>
 </p>
 
-<p align="center">
-  <img src="https://nirzak-streak-stats.vercel.app/?user=FunnyValentine69&theme=radical&hide_border=false" alt="GitHub Streak" />
-</p>
-
-<p align="center">
-  <img src="http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=FunnyValentine69&theme=radical" alt="Top Languages" />
-</p>
-
 </td>
 </tr>
 </table>
