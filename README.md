@@ -59,13 +59,11 @@
 
 ## 🚀 Featured Projects
 
-## 🚀 Featured Projects
-
 <table>
 <tr>
 <td width="35%" align="center">
 
-<img src="./maid-cafe-animation.svg" width="280" alt="Maid Cafe Animation"/>
+<img src="./Maid cafe animation.svg" width="280" alt="Maid Cafe Animation"/>
 
 <!-- If the above doesn't work, use this placeholder animated SVG -->
 <picture>
