@@ -136,7 +136,7 @@ class Developer:
   &nbsp;&nbsp;
   <a href="mailto:taichou@wsu.edu">
     <img 
-      src="https://img.shields.io/badge/Email-samson.southafeng%40wsu.edu-981E32?style=for-the-badge&logo=gmail&logoColor=white"
+      src="https://img.shields.io/badge/Email-taichou%40wsu.edu-981E32?style=for-the-badge&logo=gmail&logoColor=white"
       height="40"
       alt="WSU Email"
     />
