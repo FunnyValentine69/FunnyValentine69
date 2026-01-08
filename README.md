@@ -2,6 +2,7 @@
 <p align="center">
   <img src="./header-animation.svg" width="940" alt="Samson's Dev Journey" />
 </p>
+
 ---
 
 ## 💫 About Me
