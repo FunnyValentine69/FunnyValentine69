@@ -21,7 +21,6 @@
 <tr>
 <td width="60%" valign="top">
 
-### 💻 Tech Stack
 
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
@@ -43,7 +42,6 @@
 </td>
 <td width="40%" valign="top">
 
-### 📊 GitHub Stats
 
 <p align="center">
   <a href="https://git.io/awesome-stats-card">
@@ -80,7 +78,7 @@
 </td>
 <td width="40%" align="center">
 
-<img src="./maid-cafe-animation.svg" width="280" alt="Maid Cafe Animation"/>
+<img src="./Maid cafe animation.svg" width="280" alt="Maid Cafe Animation"/>
 
 </td>
 </tr>
@@ -205,30 +203,4 @@ I bring a unique perspective combining:
       alt="WSU Email"
     />
   </a>
-  &nbsp;&nbsp;
-  <a href="https://funnyvalentine69.github.io/samson_portfolio/" target="_blank">
-    <img 
-      src="https://img.shields.io/badge/Portfolio-samson's_portfolio-A855F7?style=for-the-badge&logo=google-chrome&logoColor=white"
-      height="40"
-      alt="Portfolio"
-    />
-  </a>
-  &nbsp;&nbsp;
-  <a href="https://github.com/FunnyValentine69" target="_blank">
-    <img 
-      src="https://img.shields.io/badge/GitHub-FunnyValentine69-181717?style=for-the-badge&logo=github&logoColor=white"
-      height="40"
-      alt="GitHub"
-    />
-  </a>
-</p>
-
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=FunnyValentine69&label=Profile%20Views&color=A855F7&style=for-the-badge" alt="Profile Views" />
-</p>
-
 ---
-
-<p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=14&duration=4000&pause=1000&color=A855F7&center=true&vCenter=true&width=600&lines=Thanks+for+visiting!+%F0%9F%91%8B;Let's+build+something+amazing+together!+%F0%9F%9A%80;AI-Assisted+Development+is+the+Future+%F0%9F%A4%96" alt="Footer Typing SVG" />
-</p>
