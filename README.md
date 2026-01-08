@@ -125,39 +125,6 @@ class Developer:
 
 ---
 
-## 🎯 Current Focus & 🌟 Unique Background
-
-<table>
-<tr>
-<td width="60%" valign="top">
-
-### 🎯 Current Focus
-
-- 🔨 Building 10+ portfolio projects
-- 📚 Learning React and modern frontend
-- 🤖 Exploring LLM integration patterns
-- 💼 Completing MPH + MBA programs
-- 🌍 Creating tech solutions for social impact
-
-</td>
-<td width="40%" valign="top">
-
-### 🌟 Unique Background
-
-**From Medical Scribe to Developer**
-
-I bring a unique perspective combining:
-- ⚕️ 5+ years documenting medical data under pressure
-- 📊 Healthcare workflow optimization experience
-- 💼 Business strategy from MBA studies
-- 🧬 Public health insights from MPH program
-- 🎮 Team leadership (former LoL club president!)
-
-</td>
-</tr>
-</table>
-
----
 
 ## 🏆 Fun Facts
 
