@@ -65,12 +65,6 @@
 
 <img src="./Maid cafe animation.svg" width="280" alt="Maid Cafe Animation"/>
 
-<!-- If the above doesn't work, use this placeholder animated SVG -->
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=18&duration=3000&pause=1000&color=FF69B4&center=true&vCenter=true&multiline=true&repeat=false&width=280&height=150&lines=%E2%98%95+Maid+Cafe;%F0%9F%92%AC+Dating+Sim;%F0%9F%A4%96+AI+Powered;%F0%9F%8E%AE+Terminal+Game">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=18&duration=3000&pause=1000&color=A855F7&center=true&vCenter=true&multiline=true&repeat=false&width=280&height=150&lines=%E2%98%95+Maid+Cafe;%F0%9F%92%AC+Dating+Sim;%F0%9F%A4%96+AI+Powered;%F0%9F%8E%AE+Terminal+Game" alt="Maid Cafe Typing Animation"/>
-</picture>
-
 </td>
 <td width="65%" valign="top">
 
