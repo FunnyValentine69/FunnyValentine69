@@ -19,7 +19,7 @@ When I'm not coding with Claude as my co-pilot, you might find me geeking out ov
 
 <table>
 <tr>
-<td style="width:50%;" width="750" valign="center">
+<td style="width:50%;" width="760" valign="center">
 
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
