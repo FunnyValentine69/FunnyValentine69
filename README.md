@@ -253,22 +253,7 @@ I bring a unique perspective combining:
       alt="Portfolio"
     />
   </a>
-  &nbsp;&nbsp;
-  <a href="https://github.com/FunnyValentine69" target="_blank">
-    <img 
-      src="https://img.shields.io/badge/GitHub-FunnyValentine69-181717?style=for-the-badge&logo=github&logoColor=white"
-      height="40"
-      alt="GitHub"
-    />
-  </a>
-</p>
 
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=FunnyValentine69&label=Profile%20Views&color=A855F7&style=for-the-badge" alt="Profile Views" />
-</p>
 
 ---
 
-<p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=14&duration=4000&pause=1000&color=A855F7&center=true&vCenter=true&width=600&lines=Thanks+for+visiting!+%F0%9F%91%8B;Let's+build+something+amazing+together!+%F0%9F%9A%80;AI-Assisted+Development+is+the+Future+%F0%9F%A4%96" alt="Footer Typing SVG" />
-</p>
