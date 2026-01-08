@@ -5,14 +5,13 @@
 
 ---
 
-## 💫 About Me
+## Hi, I'm Samson 👋
 
-🏥 **Background:** 5+ years in healthcare → MPH + MBA journey  
-🤖 **Philosophy:** AI-Assisted Development & Smart Automation  
-💡 **Mission:** Building 10+ portfolio projects to master modern dev workflows  
-🎯 **Focus:** Healthcare Tech, FinTech, and Social Impact Solutions  
-📍 **Location:** Vancouver, WA  
-🌐 **Portfolio:** [Samson's Portfolio](https://funnyvalentine69.github.io/samson_portfolio/)
+I'm a healthcare professional turned tech enthusiast with 5+ years of clinical experience working alongside physicians in high-pressure environments like the Emergency Department. Now I'm channeling that attention to detail into AI-assisted development.
+Currently pursuing my MPH in Epidemiology and MBA in Finance & International Business, I'm passionate about building tech solutions that improve health outcomes and create wealth in underserved communities.
+When I'm not coding with Claude as my co-pilot, you might find me geeking out over international relations or flexing my 150+ League of Legends champion knowledge 🎮
+
+📍 Vancouver, WA | 🌐 View My Portfolio
 
 ---
 
