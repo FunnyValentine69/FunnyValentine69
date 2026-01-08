@@ -17,9 +17,9 @@
 
 ## 💻 Skills
 
-<table style="width:100%; table-layout:fixed;">
+<table border="0">
 <tr>
-<td style="width:60%;" valign="top">
+<td style="width:50%;" width="600" valign="center">
 
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
@@ -39,7 +39,7 @@
 ![Ollama](https://img.shields.io/badge/Ollama-000000?style=for-the-badge&logo=ollama&logoColor=white)
 
 </td>
-<td style="width:40%;" valign="top">
+<td style="width:50%;" width="500" valign="center">
 
 <p align="center">
   <a href="https://git.io/awesome-stats-card">
@@ -55,9 +55,9 @@
 
 ## 🚀 Featured Projects
 
-<table style="width:100%; table-layout:fixed;">
+<table border="0">
 <tr>
-<td style="width:60%;" valign="top">
+<td style="width:50%;" width="600" valign="top">
 
 ### ☕ [Maid Cafe Dating Sim](https://github.com/FunnyValentine69/maid-cafe-dating-sim)
 
@@ -74,9 +74,9 @@
 [![Repo](https://img.shields.io/badge/View_Repo-A855F7?style=for-the-badge&logo=github&logoColor=white)](https://github.com/FunnyValentine69/maid-cafe-dating-sim)
 
 </td>
-<td style="width:40%;" align="center">
+<td style="width:50%;" width="500" align="center">
 
-<img src="./Maid cafe animation.svg" width="280" alt="Maid Cafe Animation"/>
+<img src="./Maid cafe animation.svg" width="500" alt="Maid Cafe Animation"/>
 
 </td>
 </tr>
@@ -86,9 +86,9 @@
 
 ## 💭 My Development Philosophy
 
-<table style="width:100%; table-layout:fixed;">
+<table border=0>
 <tr>
-<td style="width:60%;" valign="top">
+<td width="50" valign="center">
 
 ```python
 class Developer:
@@ -112,8 +112,8 @@ class Developer:
         return "10x productivity achieved ✨"
 ```
 
-</td>
-<td style="width:40%;" align="center">
+</td border=0>
+<td style="width:100%;" width="500" align="center">
 
 <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=14&duration=2500&pause=800&color=A855F7&center=true&vCenter=true&multiline=true&width=320&height=200&lines=%F0%9F%A7%A0+Think+Different;%F0%9F%A4%96+Build+with+AI;%F0%9F%9A%80+Ship+Fast;%F0%9F%94%81+Iterate+Always;%E2%9C%A8+10x+Productivity" alt="Philosophy Animation"/>
 
@@ -125,9 +125,9 @@ class Developer:
 
 ## 🏆 Fun Facts
 
-<table style="width:100%; table-layout:fixed;">
-<tr>
-<td style="width:60%;" valign="top">
+<table border=0>
+<tr border=0>
+<td style="width:50%;" width="600" valign="center" border="0" >
 
 - 🎮 Memorized **150+ League of Legends champions** (each with 5 skills!)
 - 🌍 International relations enthusiast with global perspective
@@ -139,9 +139,9 @@ class Developer:
 **Why it matters:** This cross-domain expertise helps me build solutions that understand real user needs, handle complex data, and create meaningful impact.
 
 </td>
-<td style="width:40%;" align="center">
+<td style="width:100%;" width="500" border=0 align="center">
 
-<img src="https://readme-typing-svg.herokuapp.com?font=Press+Start+2P&size=10&duration=2000&pause=500&color=A855F7&center=true&vCenter=true&multiline=true&width=200&height=180&lines=%F0%9F%8E%AE+150%2B+Champions;%F0%9F%8C%8D+Global+Thinker;%F0%9F%8F%A5+Healthcare+Pro;%F0%9F%A4%96+AI+Pioneer;%E2%8C%A8%EF%B8%8F+100%2B+WPM" alt="Fun Facts Animation"/>
+<img src="https://readme-typing-svg.herokuapp.com?font=Press+Start+2P&size=10&duration=2000&pause=500&color=A855F7&center=true&vCenter=true&multiline=true&width=200&height=180&lines=%F0%9F%8E%AE+150%2B+Champions;%F0%9F%8C%8D+Global+Thinker;%F0%9F%8F%A5+Healthcare+Pro;%F0%9F%A4%96+AI+Pioneer;%E2%8C%A8%EF%B8%8F+100%2B+WPM" width="500" alt="Fun Facts Animation"/>
 
 </td>
 </tr>
