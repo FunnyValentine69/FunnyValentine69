@@ -13,7 +13,9 @@
 ## Hi, I'm Samson 👋
 
 I'm a healthcare professional turned tech enthusiast with 10+ years of clinical experience working alongside physicians in high-pressure environments like the Emergency Department. Now I'm channeling that attention to detail into AI-assisted development.
+
 Currently pursuing my MPH in Epidemiology and MBA in Finance & International Business, I'm passionate about building tech solutions that improve health outcomes and create wealth in underserved communities.
+
 When I'm not coding with Claude as my co-pilot, you might find me geeking out over international relations or flexing my 150+ League of Legends champion knowledge 🎮
 
 📍 Vancouver, WA | 🌐 [View My Portfolio](https://funnyvalentine69.github.io/samson_portfolio/)
@@ -114,13 +116,13 @@ class Developer:
             self.ship_real_projects()
             self.iterate_and_improve()
         
-        return "10x productivity achieved ✨"
+        return "Real solutions, shipped ✨"
 ```
 
 </td>
 <td width="1000" align="center">
 
-<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=14&duration=2500&pause=800&color=A855F7&center=true&vCenter=true&multiline=true&width=320&height=200&lines=%F0%9F%A7%A0+Think+Different;%F0%9F%A4%96+Build+with+AI;%F0%9F%9A%80+Ship+Fast;%F0%9F%94%81+Iterate+Always;%E2%9C%A8+10x+Productivity" alt="Philosophy Animation"/>
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=14&duration=2500&pause=800&color=A855F7&center=true&vCenter=true&multiline=true&width=320&height=200&lines=%F0%9F%A7%A0+Think+Different;%F0%9F%A4%96+Build+with+AI;%F0%9F%9A%80+Ship+Fast;%F0%9F%94%81+Iterate+Always;%E2%9C%A8+Solve+Real+Problems" alt="Philosophy Animation"/>
 
 </td>
 </tr>
