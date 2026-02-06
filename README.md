@@ -105,7 +105,7 @@ When I'm not coding with Claude as my co-pilot, you might find me geeking out ov
 </td>
 <td style="width:50%;" width="500" align="center" valign="center">
 
-<p align="center"><em>Actively in development</em></p>
+<img src="./sakura.png" width="350" alt="Sakura — MaidAI v3"/>
 
 </td>
 </tr>
