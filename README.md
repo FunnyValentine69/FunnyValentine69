@@ -49,9 +49,7 @@ When I'm not coding with Claude as my co-pilot, you might find me geeking out ov
 <td style="width:50%;" width="500" valign="center">
 
 <p align="center">
-  <a href="https://git.io/awesome-stats-card">
-    <img src="https://awesome-github-stats.azurewebsites.net/user-stats/FunnyValentine69?cardType=level&theme=radical&Background=0D1117&Text=C9D1D9&Title=A855F7&Ring=A855F7&preferLogin=false" alt="GitHub Stats" />
-  </a>
+  <img src="https://github-readme-stats-one-bice.vercel.app/api/top-langs/?username=FunnyValentine69&layout=compact&theme=radical&bg_color=0D1117&text_color=C9D1D9&title_color=A855F7" alt="Top Languages" />
 </p>
 
 </td>
@@ -84,6 +82,30 @@ When I'm not coding with Claude as my co-pilot, you might find me geeking out ov
 <td style="width:50%;" width="500" align="center">
 
 <img src="./maid-cafe-animation.svg" width="500" alt="Maid Cafe Animation"/>
+
+</td>
+</tr>
+<tr>
+<td style="width:50%;" width="700" valign="top">
+
+### 🎙️ [MaidAI v3 — Sakura](https://github.com/FunnyValentine69/maidai-v3)
+
+> Tsundere maid AI with voice chat and bilingual JP/EN dialogue
+
+**Features:**
+- 🗣️ Voice input via mlx-whisper (Apple Silicon optimized)
+- 🎌 Bilingual JRPG-style dialogue (Japanese + English)
+- 🎭 14 dynamic emotion expressions
+- 🧠 Persistent conversation memory
+
+**Tech Stack:** `Python` `Ollama` `Edge TTS` `mlx-whisper`
+
+[![Repo](https://img.shields.io/badge/View_Repo-A855F7?style=for-the-badge&logo=github&logoColor=white)](https://github.com/FunnyValentine69/maidai-v3)
+
+</td>
+<td style="width:50%;" width="500" align="center" valign="center">
+
+<p align="center"><em>Actively in development</em></p>
 
 </td>
 </tr>
