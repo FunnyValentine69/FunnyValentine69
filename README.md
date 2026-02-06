@@ -4,7 +4,7 @@
 </p>
 
 <p align="right">
-  <img src="https://api.visitorbadge.io/api/visitors?path=SuperGokou.SuperGokou&label=Profile%20Views&countColor=%23263759" alt="Profile Views" />
+  <img src="https://api.visitorbadge.io/api/visitors?path=FunnyValentine69.FunnyValentine69&label=Profile%20Views&countColor=%23263759" alt="Profile Views" />
 </p>
 
 
@@ -64,7 +64,7 @@ When I'm not coding with Claude as my co-pilot, you might find me geeking out ov
 <tr>
 <td style="width:50%;" width="700" valign="top">
 
-### ☕ [Maid Cafe Dating Sim](https://github.com/FunnyValentine69/maid-cafe-dating-sim)
+### ☕ [Maid Cafe Dating Sim](https://github.com/FunnyValentine69/maidai-v1)
 
 > AI-powered terminal dating game with dynamic NPC conversations
 
@@ -76,12 +76,12 @@ When I'm not coding with Claude as my co-pilot, you might find me geeking out ov
 
 **Tech Stack:** `Python` `Ollama` `Rich Library`
 
-[![Repo](https://img.shields.io/badge/View_Repo-A855F7?style=for-the-badge&logo=github&logoColor=white)](https://github.com/FunnyValentine69/maid-cafe-dating-sim)
+[![Repo](https://img.shields.io/badge/View_Repo-A855F7?style=for-the-badge&logo=github&logoColor=white)](https://github.com/FunnyValentine69/maidai-v1)
 
 </td>
 <td style="width:50%;" width="500" align="center">
 
-<img src="./Maid cafe animation.svg" width="500" alt="Maid Cafe Animation"/>
+<img src="./maid-cafe-animation.svg" width="500" alt="Maid Cafe Animation"/>
 
 </td>
 </tr>
