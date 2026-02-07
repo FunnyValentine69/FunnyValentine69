@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; }
+  body { background: #030014; overflow: hidden; }
+  canvas { display: block; }
+</style>
+</head>
+<body>
+<canvas id="c" width="800" height="560"></canvas>
+<script>
+const canvas = document.getElementById('c');
+const ctx = canvas.getContext('2d');
+const W = 800, H = 560;
+const DURATION = 8; // seconds for perfect loop
+const NUM_PARTICLES = 55;
+const CONNECT_DIST = 120;
+
+// Seeded PRNG for deterministic results
+let seed = 42;
+function rand() {
+  seed = (seed * 16807 + 0) % 2147483647;
+  return (seed - 1) / 2147483646;
+}
+
+// Color palette matching header
+const COLORS = ['#A855F7', '#06B6D4', '#EC4899'];
+
+// Generate particles with deterministic properties
+const particles = [];
+for (let i = 0; i < NUM_PARTICLES; i++) {
+  const isKey = i < 8; // first 8 are "key nodes" — larger with glow
+  particles.push({
+    baseX: rand() * W,
+    baseY: rand() * H,
+    ampX: 15 + rand() * 40,
+    ampY: 15 + rand() * 40,
+    phaseX: rand() * Math.PI * 2,
+    phaseY: rand() * Math.PI * 2,
+    r: isKey ? 2.5 + rand() * 1.5 : 1 + rand() * 1.2,
+    color: COLORS[Math.floor(rand() * COLORS.length)],
+    isKey: isKey,
+    alpha: isKey ? 0.9 : 0.5 + rand() * 0.3
+  });
+}
+
+// Nebula blobs (subtle background atmosphere)
+const nebulae = [];
+for (let i = 0; i < 4; i++) {
+  nebulae.push({
+    x: 100 + rand() * (W - 200),
+    y: 100 + rand() * (H - 200),
+    r: 120 + rand() * 100,
+    color: COLORS[i % COLORS.length],
+    phaseX: rand() * Math.PI * 2,
+    phaseY: rand() * Math.PI * 2,
+    ampX: 20 + rand() * 15,
+    ampY: 20 + rand() * 15
+  });
+}
+
+function getPos(p, t) {
+  const angle = (2 * Math.PI * t) / DURATION;
+  return {
+    x: p.baseX + p.ampX * Math.sin(angle + p.phaseX),
+    y: p.baseY + p.ampY * Math.sin(angle + p.phaseY)
+  };
+}
+
+// Exposed for Puppeteer to call with exact time
+window.renderFrame = function(t) {
+  // Background with radial gradient
+  const bg = ctx.createRadialGradient(W / 2, H / 2, 0, W / 2, H / 2, W * 0.7);
+  bg.addColorStop(0, '#0a0a2e');
+  bg.addColorStop(1, '#030014');
+  ctx.fillStyle = bg;
+  ctx.fillRect(0, 0, W, H);
+
+  // Nebula blobs
+  const angle = (2 * Math.PI * t) / DURATION;
+  for (const n of nebulae) {
+    const nx = n.x + n.ampX * Math.sin(angle + n.phaseX);
+    const ny = n.y + n.ampY * Math.sin(angle + n.phaseY);
+    const grad = ctx.createRadialGradient(nx, ny, 0, nx, ny, n.r);
+    grad.addColorStop(0, n.color + '0A'); // very faint center
+    grad.addColorStop(0.5, n.color + '05');
+    grad.addColorStop(1, 'transparent');
+    ctx.fillStyle = grad;
+    ctx.fillRect(nx - n.r, ny - n.r, n.r * 2, n.r * 2);
+  }
+
+  // Calculate positions
+  const positions = particles.map(p => getPos(p, t));
+
+  // Draw connection lines
+  for (let i = 0; i < NUM_PARTICLES; i++) {
+    for (let j = i + 1; j < NUM_PARTICLES; j++) {
+      const a = positions[i], b = positions[j];
+      const dx = a.x - b.x, dy = a.y - b.y;
+      const dist = Math.sqrt(dx * dx + dy * dy);
+      if (dist < CONNECT_DIST) {
+        const opacity = (1 - dist / CONNECT_DIST) * 0.35;
+        ctx.strokeStyle = `rgba(168, 85, 247, ${opacity})`;
+        ctx.lineWidth = 0.5;
+        ctx.beginPath();
+        ctx.moveTo(a.x, a.y);
+        ctx.lineTo(b.x, b.y);
+        ctx.stroke();
+      }
+    }
+  }
+
+  // Draw particles
+  for (let i = 0; i < NUM_PARTICLES; i++) {
+    const p = particles[i];
+    const pos = positions[i];
+
+    // Glow for key nodes
+    if (p.isKey) {
+      const glow = ctx.createRadialGradient(pos.x, pos.y, 0, pos.x, pos.y, p.r * 6);
+      glow.addColorStop(0, p.color + '30');
+      glow.addColorStop(1, 'transparent');
+      ctx.fillStyle = glow;
+      ctx.beginPath();
+      ctx.arc(pos.x, pos.y, p.r * 6, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    // Particle dot
+    ctx.fillStyle = p.color;
+    ctx.globalAlpha = p.alpha;
+    ctx.beginPath();
+    ctx.arc(pos.x, pos.y, p.r, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.globalAlpha = 1;
+  }
+};
+
+// Auto-play for browser preview (not used during capture)
+let start = null;
+function animate(ts) {
+  if (!start) start = ts;
+  const t = ((ts - start) / 1000) % DURATION;
+  window.renderFrame(t);
+  requestAnimationFrame(animate);
+}
+requestAnimationFrame(animate);
+</script>
+</body>
+</html>

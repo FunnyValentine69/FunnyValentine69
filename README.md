@@ -10,15 +10,29 @@
 
 ---
 
+<table>
+<tr>
+<td width="60%">
+
 ## Hi, I'm Samson 👋
 
-I'm a healthcare professional turned tech enthusiast with 10+ years of clinical experience working alongside physicians in high-pressure environments like the Emergency Department. Now I'm channeling that attention to detail into AI-assisted development.
+<ul>
+  <li>🏥 <strong>Healthcare → Tech:</strong> 10+ yrs clinical experience in high-pressure environments (ED, alongside physicians)</li>
+  <li>🎓 <strong>Education:</strong> MPH Epidemiology + MBA Finance & International Business</li>
+  <li>🤖 <strong>AI-Assisted Dev:</strong> Building with Claude as my co-pilot</li>
+  <li>🌍 <strong>Based in:</strong> Vancouver, WA</li>
+  <li>🎮 <strong>Off-hours:</strong> League of Legends enthusiast (150+ champs)</li>
+  <li>🌐 <a href="https://funnyvalentine69.github.io/samson_portfolio/">View My Portfolio</a></li>
+</ul>
 
-Currently pursuing my MPH in Epidemiology and MBA in Finance & International Business, I'm passionate about building tech solutions that improve health outcomes and create wealth in underserved communities.
+</td>
+<td width="40%" align="center">
 
-When I'm not coding with Claude as my co-pilot, you might find me geeking out over international relations or flexing my 150+ League of Legends champion knowledge 🎮
+<img src="./intro-animation.gif" width="400" alt="Samson's Journey Animation"/>
 
-📍 Vancouver, WA | 🌐 [View My Portfolio](https://funnyvalentine69.github.io/samson_portfolio/)
+</td>
+</tr>
+</table>
 
 ---
 
@@ -72,9 +86,9 @@ When I'm not coding with Claude as my co-pilot, you might find me geeking out ov
 - 🤖 Local LLM integration for natural dialogue
 - 🎭 Dynamic character personalities  
 - 💬 Natural language processing
-- 🎨 Rich terminal UI
+- 🎨 Terminal-based gameplay
 
-**Tech Stack:** `Python` `Ollama` `Rich Library`
+**Tech Stack:** `Python` `Ollama` `llama3.2`
 
 [![Repo](https://img.shields.io/badge/View_Repo-A855F7?style=for-the-badge&logo=github&logoColor=white)](https://github.com/FunnyValentine69/maidai-v1)
 
@@ -152,7 +166,7 @@ class Developer:
 
 ---
 
-## 📡 Network & Socials
+## 📡 Network & Socials <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Handshake.png" width="30" alt="Handshake" />
 
 <p align="center">
   <a href="https://linkedin.com/in/samson-southafeng" target="_blank">
@@ -170,3 +184,4 @@ class Developer:
       alt="WSU Email"
     />
   </a>
+</p>
