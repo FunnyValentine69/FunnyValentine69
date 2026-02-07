@@ -10,10 +10,6 @@
 
 ---
 
-<table>
-<tr>
-<td width="60%">
-
 ## Hi, I'm Samson 👋
 
 <ul>
@@ -25,14 +21,9 @@
   <li>🌐 <a href="https://funnyvalentine69.github.io/samson_portfolio/">View My Portfolio</a></li>
 </ul>
 
-</td>
-<td width="40%" align="center">
-
-<img src="./intro-animation.gif" width="400" alt="Samson's Journey Animation"/>
-
-</td>
-</tr>
-</table>
+<p align="center">
+  <img src="./intro-animation.gif" width="940" alt="Samson's Journey Animation"/>
+</p>
 
 ---
 

@@ -2,302 +2,632 @@
 <html>
 <head>
 <meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-  * { margin: 0; padding: 0; }
-  body { background: #030014; overflow: hidden; }
-  canvas { display: block; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #030014; overflow: hidden; width: 1200px; height: 820px; position: relative; }
+  #scene { position: relative; width: 1200px; height: 820px; }
+  canvas { display: block; position: absolute; top: 0; left: 0; }
+
+  .glass {
+    background: rgba(8, 4, 28, 0.5);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+  }
+
+  #hud {
+    position: absolute; top: 0; left: 0;
+    width: 1200px; height: 820px;
+    pointer-events: none;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  /* ── Enemy bar (top center) ── */
+  #enemy-bar {
+    position: absolute;
+    top: 10px; left: 50%; transform: translateX(-50%);
+    padding: 6px 20px 8px;
+    display: flex; flex-direction: column; align-items: center; gap: 4px;
+  }
+  #enemy-bar .name-row {
+    display: flex; align-items: baseline; gap: 14px;
+  }
+  #enemy-bar .name {
+    font-size: 18px; font-weight: 700; color: #fff;
+    text-shadow: 0 0 10px rgba(168,85,247,0.5), 0 2px 4px rgba(0,0,0,0.9);
+    letter-spacing: 1.5px;
+  }
+  #enemy-bar .level {
+    font-size: 13px; font-weight: 600; color: #FCD34D;
+    text-shadow: 0 0 8px rgba(252,211,77,0.4), 0 2px 4px rgba(0,0,0,0.9);
+  }
+  #enemy-bar .hp-row {
+    display: flex; align-items: center; gap: 10px;
+  }
+  .hp-track {
+    width: 220px; height: 8px;
+    background: rgba(30,20,50,0.6);
+    border-radius: 5px; overflow: hidden;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.6);
+  }
+  .hp-fill {
+    height: 100%; border-radius: 5px;
+    background: linear-gradient(90deg, #ef4444, #f97316);
+    box-shadow: 0 0 10px rgba(239,68,68,0.5);
+  }
+  #enemy-bar .hp-value {
+    font-size: 15px; font-weight: 600; color: #ef4444;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.9);
+  }
+
+  /* ── Bottom bar (panels touching) ── */
+  #bottom-bar {
+    position: absolute;
+    bottom: 12px; left: 20px; right: 20px;
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  /* ── Player panel (bottom left) ── */
+  #player-panel {
+    flex: 1;
+    padding: 12px 20px;
+    display: flex; flex-direction: column; justify-content: center;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: none;
+    border-color: rgba(255,255,255,0.25);
+  }
+  #player-panel .name-row {
+    display: flex; align-items: baseline; justify-content: center; gap: 10px; margin-bottom: 8px;
+  }
+  #player-panel .name {
+    font-size: 20px; font-weight: 700; color: #fff;
+    text-shadow: 0 0 8px rgba(168,85,247,0.4), 0 1px 3px rgba(0,0,0,0.9);
+    letter-spacing: 0.5px;
+  }
+  #player-panel .level {
+    font-size: 16px; font-weight: 600; color: #FCD34D;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.9);
+  }
+  #player-panel .class {
+    font-size: 16px; font-weight: 600; color: #4ADE80;
+    text-shadow: 0 0 6px rgba(74,222,128,0.3), 0 1px 3px rgba(0,0,0,0.9);
+  }
+  .stat-row {
+    display: flex; align-items: center; gap: 10px; margin-bottom: 4px;
+  }
+  .stat-label {
+    font-size: 16px; font-weight: 700; width: 30px; text-align: right; flex-shrink: 0;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.9);
+  }
+  .stat-label.hp { color: #ef4444; }
+  .stat-label.mp { color: #60a5fa; }
+  .stat-track {
+    flex: 1; height: 10px;
+    background: rgba(30,20,50,0.5);
+    border-radius: 5px; overflow: hidden;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.5);
+  }
+  .stat-fill.hp-bar {
+    height: 100%; border-radius: 5px;
+    background: linear-gradient(90deg, #22c55e, #86efac);
+    box-shadow: 0 0 8px rgba(34,197,94,0.4);
+    width: 100%;
+  }
+  .stat-fill.mp-bar {
+    height: 100%; border-radius: 5px;
+    background: linear-gradient(90deg, #3b82f6, #93c5fd);
+    box-shadow: 0 0 8px rgba(59,130,246,0.4);
+    width: 100%;
+  }
+  .stat-value {
+    font-size: 17px; color: #d1d5db; flex-shrink: 0;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.9);
+  }
+
+  /* ── Command menu (bottom right, touching player panel) ── */
+  #cmd-menu {
+    flex: 1;
+    padding: 12px 20px;
+    display: flex; flex-direction: column; justify-content: center;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left: 1px solid rgba(255,255,255,0.12);
+    border-color: rgba(255,255,255,0.25);
+  }
+  #cmd-menu .header {
+    font-size: 18px; font-weight: 700; color: #FCD34D;
+    text-shadow: 0 0 8px rgba(252,211,77,0.3), 0 1px 3px rgba(0,0,0,0.9);
+    letter-spacing: 1.5px; margin-bottom: 8px; text-align: center;
+  }
+  .cmd-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 32px;
+  }
+  .cmd-item {
+    font-size: 20px; padding: 5px 0;
+    color: rgba(200,200,220,0.55);
+    text-shadow: 0 1px 3px rgba(0,0,0,0.9);
+    white-space: nowrap;
+    text-align: center;
+  }
+  .cmd-item.active {
+    color: #fff;
+    text-shadow: 0 0 10px rgba(103,232,249,0.5), 0 1px 3px rgba(0,0,0,0.9);
+  }
+  .cmd-cursor {
+    color: #67E8F9; margin-right: 4px;
+  }
+
+  /* Fixed-size inner wrapper — both states occupy same grid cell */
+  #cmd-inner {
+    display: grid;
+  }
+  #cmd-inner > div {
+    grid-area: 1 / 1;
+  }
+
+  /* ── Skill items (shown in cmd-grid when SKILLS selected) ── */
+  .skill-item {
+    font-size: 20px; padding: 5px 0;
+    color: rgba(200,200,220,0.45);
+    text-shadow: 0 1px 3px rgba(0,0,0,0.9);
+    white-space: nowrap;
+    text-align: center;
+  }
+  .skill-item.active {
+    color: #EC4899;
+    text-shadow: 0 0 10px rgba(236,72,153,0.5), 0 1px 3px rgba(0,0,0,0.9);
+  }
+  .mp-cost {
+    font-size: 11px; color: #60a5fa; opacity: 0.6;
+    margin-left: 2px;
+  }
+
+  /* ── Action window (FF-style cast window, top area) ── */
+  #action-window {
+    position: absolute;
+    top: 80px; left: 50%; transform: translateX(-50%);
+    padding: 10px 28px;
+    display: none;
+  }
+  #action-text {
+    font-size: 24px; font-weight: 600; color: #67E8F9;
+    text-shadow: 0 0 14px rgba(103,232,249,0.6), 0 0 28px rgba(103,232,249,0.25), 0 2px 4px rgba(0,0,0,0.95);
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+  }
+
+  /* ── Damage number ── */
+  #dmg-number {
+    position: absolute;
+    left: 50%; transform: translateX(-50%);
+    text-align: center;
+    display: none;
+  }
+  #dmg-number .crit-label {
+    font-size: 24px; font-weight: 700; color: #ef4444;
+    letter-spacing: 6px;
+    text-shadow: 0 0 12px rgba(239,68,68,0.8), 0 0 24px rgba(239,68,68,0.4),
+                 1px 1px 0 rgba(100,0,0,0.8), -1px -1px 0 rgba(100,0,0,0.8),
+                 1px -1px 0 rgba(100,0,0,0.8), -1px 1px 0 rgba(100,0,0,0.8);
+    display: block; margin-bottom: 2px;
+  }
+  #dmg-number .dmg-value {
+    font-size: 80px; font-weight: 700; color: #FCD34D;
+    letter-spacing: 5px;
+    -webkit-text-stroke: 2px rgba(180,60,0,0.7);
+    text-shadow: 0 0 24px rgba(252,211,77,0.9), 0 0 48px rgba(252,211,77,0.4),
+                 3px 3px 0 rgba(120,40,0,0.9), -2px -2px 0 rgba(120,40,0,0.5),
+                 0 4px 10px rgba(0,0,0,0.95);
+  }
 </style>
 </head>
 <body>
-<canvas id="c" width="800" height="560"></canvas>
+<div id="scene">
+<canvas id="c" width="1200" height="820"></canvas>
+<canvas id="bloom" width="1200" height="820" style="display:none"></canvas>
+
+<div id="hud">
+  <div id="enemy-bar" class="glass">
+    <div class="name-row">
+      <span class="name">Void Sentinel</span>
+      <span class="level">Lv.99</span>
+    </div>
+    <div class="hp-row">
+      <div class="hp-track"><div class="hp-fill" id="enemy-hp"></div></div>
+      <span class="hp-value" id="enemy-hp-val">100%</span>
+    </div>
+  </div>
+
+  <div id="dmg-number"><span class="crit-label">CRITICAL</span><span class="dmg-value">9999</span></div>
+  <div id="action-window" class="glass"><span id="action-text"></span></div>
+
+  <div id="bottom-bar">
+    <div id="player-panel" class="glass">
+      <div class="name-row">
+        <span class="name">SAMSON</span>
+        <span class="level">Lv.99</span>
+        <span class="class">Technomancer</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-label hp">HP</span>
+        <div class="stat-track"><div class="stat-fill hp-bar"></div></div>
+        <span class="stat-value">850/850</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-label mp">MP</span>
+        <div class="stat-track"><div class="stat-fill mp-bar" id="player-mp-fill"></div></div>
+        <span class="stat-value" id="player-mp-val">420/420</span>
+      </div>
+    </div>
+
+    <div id="cmd-menu" class="glass">
+      <div id="cmd-inner">
+        <div id="cmd-state-main">
+          <div class="header">COMMAND</div>
+          <div class="cmd-grid">
+            <div class="cmd-item" id="cmd-0">ATTACK</div>
+            <div class="cmd-item" id="cmd-1">MAGIC</div>
+            <div class="cmd-item" id="cmd-2">SKILLS</div>
+            <div class="cmd-item" id="cmd-3">DEFEND</div>
+          </div>
+        </div>
+        <div id="cmd-state-skills" style="visibility:hidden">
+          <div class="header">SKILLS</div>
+          <div class="cmd-grid">
+            <div class="skill-item active"><span class="cmd-cursor">&#x25B8;</span>Kernel Panic <span class="mp-cost">140</span></div>
+            <div class="skill-item">Stack Overflow <span class="mp-cost">120</span></div>
+            <div class="skill-item">Null Pointer <span class="mp-cost">80</span></div>
+            <div class="skill-item">Deadlock <span class="mp-cost">160</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
 <script>
 const canvas = document.getElementById('c');
 const ctx = canvas.getContext('2d');
-const W = 800, H = 560;
+const bloomCanvas = document.getElementById('bloom');
+const bctx = bloomCanvas.getContext('2d');
+const W = 1200, H = 820;
 const DURATION = 8;
 
-// Seeded PRNG
-let seed = 42;
-function rand() {
-  seed = (seed * 16807) % 2147483647;
-  return (seed - 1) / 2147483646;
-}
+const $scene = document.getElementById('scene');
+const $hud = document.getElementById('hud');
+const $enemyHp = document.getElementById('enemy-hp');
+const $dmg = document.getElementById('dmg-number');
+const $action = document.getElementById('action-text');
+const $cmds = [0,1,2,3].map(i => document.getElementById('cmd-' + i));
+const $cmdMain = document.getElementById('cmd-state-main');
+const $cmdSkills = document.getElementById('cmd-state-skills');
+const $mpFill = document.getElementById('player-mp-fill');
+const $mpVal = document.getElementById('player-mp-val');
+const $actionWin = document.getElementById('action-window');
+const $enemyHpVal = document.getElementById('enemy-hp-val');
 
-// Particles (background atmosphere)
-const COLORS = ['#A855F7', '#06B6D4', '#EC4899'];
-const particles = [];
-for (let i = 0; i < 40; i++) {
-  particles.push({
-    baseX: rand() * W, baseY: rand() * H,
-    ampX: 10 + rand() * 25, ampY: 10 + rand() * 25,
-    phaseX: rand() * Math.PI * 2, phaseY: rand() * Math.PI * 2,
-    r: 0.8 + rand() * 1.2,
-    color: COLORS[Math.floor(rand() * COLORS.length)],
-    alpha: 0.3 + rand() * 0.3
+function easeOut(x) { return 1 - Math.pow(1 - x, 3); }
+function easeInOut(x) { return x < 0.5 ? 4*x*x*x : 1-Math.pow(-2*x+2,3)/2; }
+function clamp01(x) { return Math.min(1, Math.max(0, x)); }
+function progress(t, start, dur) { return clamp01((t - start) / dur); }
+
+let seed = 77;
+function rand() { seed = (seed * 16807) % 2147483647; return (seed - 1) / 2147483646; }
+
+// ══════════ ENEMY IMAGE ══════════
+const enemyImg = new Image();
+enemyImg.onload = () => {
+  window._imageLoaded = true;
+  if (window._onImageLoad) window._onImageLoad();
+};
+enemyImg.src = 'enemy.png';
+
+// ══════════ PRE-GENERATE: Speed lines ══════════
+const speedLines = [];
+for (let i = 0; i < 60; i++) {
+  speedLines.push({
+    angle: rand() * Math.PI * 2,
+    innerR: 30 + rand() * 100,
+    outerR: 500 + rand() * 300,
+    width: 1 + rand() * 3.5,
+    alpha: 0.4 + rand() * 0.6,
+    delay: rand() * 0.5,
+    color: ['#A855F7','#67E8F9','#EC4899','#ffffff'][Math.floor(rand() * 4)]
   });
 }
 
-function getPos(p, angle) {
-  return {
-    x: p.baseX + p.ampX * Math.sin(angle + p.phaseX),
-    y: p.baseY + p.ampY * Math.sin(angle + p.phaseY)
-  };
+// Timeline
+const FADE_IN = 0.3;
+const TEXT_START = 1.2;
+const TEXT_DUR = 1.0;
+const ATTACK_START = 2.5;
+const ATTACK_DUR = 1.0;
+const HIT_TIME = 3.5;
+const SHAKE_DUR = 0.45;
+const FADE_OUT = 7.0;
+const ACTION_STR = 'Samson executes Kernel Panic!';
+const IMPACT_X = W / 2, IMPACT_Y = H * 0.35;
+
+// ══════════ CANVAS: Background ══════════
+function drawBG(t) {
+  ctx.fillStyle = '#030014';
+  ctx.fillRect(0, 0, W, H);
+  if (!enemyImg.complete) return;
+
+  const imgAR = enemyImg.naturalWidth / enemyImg.naturalHeight;
+  const canvasAR = W / H;
+  let iw, ih, ix, iy;
+  if (imgAR < canvasAR) {
+    iw = W; ih = W / imgAR;
+    ix = 0; iy = (H - ih) / 2;
+  } else {
+    ih = H; iw = H * imgAR;
+    ix = (W - iw) / 2; iy = 0;
+  }
+
+  const bob = Math.sin(t * 1.5) * 3;
+  const breathe = 1 + Math.sin(t * 2.5) * 0.004;
+  const hitP = progress(t, HIT_TIME, 0.3);
+  const hitFlash = hitP > 0 && hitP < 1 && Math.floor(t * 20) % 2 === 0;
+
+  ctx.save();
+  ctx.translate(W / 2, H / 2);
+  ctx.scale(breathe, breathe);
+  ctx.translate(-W / 2, -H / 2);
+  ctx.globalAlpha = hitFlash ? 0.3 : 1;
+  ctx.drawImage(enemyImg, ix, iy + bob, iw, ih);
+  ctx.restore();
+  ctx.globalAlpha = 1;
+
+  // Bottom gradient for HUD readability
+  const botGrad = ctx.createLinearGradient(0, H - 220, 0, H);
+  botGrad.addColorStop(0, 'transparent');
+  botGrad.addColorStop(0.3, 'rgba(3,0,20,0.4)');
+  botGrad.addColorStop(1, 'rgba(3,0,20,0.85)');
+  ctx.fillStyle = botGrad;
+  ctx.fillRect(0, H - 220, W, 220);
+
+  // Top gradient
+  const topGrad = ctx.createLinearGradient(0, 0, 0, 80);
+  topGrad.addColorStop(0, 'rgba(3,0,20,0.6)');
+  topGrad.addColorStop(1, 'transparent');
+  ctx.fillStyle = topGrad;
+  ctx.fillRect(0, 0, W, 80);
 }
 
-// Easing: smooth ease-out
-function easeOut(x) { return 1 - Math.pow(1 - x, 3); }
+// ══════════ CANVAS: Anime speed lines ══════════
+function drawSpeedLines(t) {
+  const aP = progress(t, ATTACK_START, ATTACK_DUR);
+  if (aP <= 0) return;
 
-// Stat bars config
-const stats = [
-  { label: 'clinical',  value: '10+ yrs',   pct: 0.92, color: '#A855F7', glowColor: 'rgba(168,85,247,' },
-  { label: 'education', value: 'MPH + MBA',  pct: 0.85, color: '#06B6D4', glowColor: 'rgba(6,182,212,' },
-  { label: 'building',  value: 'full-stack', pct: 0.80, color: '#EC4899', glowColor: 'rgba(236,72,153,' },
-  { label: 'shipped',   value: '10+ proj',   pct: 0.78, color: '#F59E0B', glowColor: 'rgba(245,158,11,' },
-];
+  // Lines intensify during buildup, then burst at hit
+  let intensity;
+  if (t < HIT_TIME) {
+    intensity = easeInOut(aP);
+  } else if (t < HIT_TIME + 0.2) {
+    intensity = 1;
+  } else {
+    intensity = Math.max(0, 1 - progress(t, HIT_TIME + 0.2, 0.5));
+  }
+  if (intensity <= 0) return;
 
-// Timeline (seconds): bars animate in sequence, then status line appears
-const BAR_START = 0.8;   // first bar starts filling
-const BAR_DUR = 0.7;     // each bar takes this long to fill
-const BAR_GAP = 0.3;     // gap between bar start times
-const STATUS_TIME = BAR_START + stats.length * (BAR_DUR + BAR_GAP) - BAR_GAP + 0.4;
-const FADE_OUT_START = 6.5;
-const FADE_OUT_DUR = 1.0;
+  ctx.save();
+  ctx.translate(IMPACT_X, IMPACT_Y);
 
-// Card dimensions
-const CX = W / 2, CY = H / 2;
-const CW = 520, CH = 360;
-const CL = CX - CW / 2, CT = CY - CH / 2;
+  for (const l of speedLines) {
+    const lineP = clamp01((aP - l.delay) / (1 - l.delay));
+    if (lineP <= 0) continue;
 
-function drawBackground(angle) {
-  const bg = ctx.createRadialGradient(W/2, H/2, 0, W/2, H/2, W * 0.7);
-  bg.addColorStop(0, '#0a0a2e');
-  bg.addColorStop(1, '#030014');
-  ctx.fillStyle = bg;
+    const cos = Math.cos(l.angle);
+    const sin = Math.sin(l.angle);
+    const inner = l.innerR * (1 - lineP * 0.5);
+    const outer = l.innerR + (l.outerR - l.innerR) * lineP;
+
+    ctx.globalAlpha = l.alpha * intensity * lineP;
+    ctx.strokeStyle = l.color;
+    ctx.lineWidth = l.width * intensity;
+    ctx.shadowColor = l.color;
+    ctx.shadowBlur = 8;
+    ctx.beginPath();
+    ctx.moveTo(cos * inner, sin * inner);
+    ctx.lineTo(cos * outer, sin * outer);
+    ctx.stroke();
+  }
+
+  ctx.restore();
+  ctx.shadowBlur = 0;
+  ctx.globalAlpha = 1;
+}
+
+// ══════════ CANVAS: Shockwave rings ══════════
+function drawShockwaves(t) {
+  if (t < HIT_TIME || t > HIT_TIME + 1.5) return;
+
+  for (let i = 0; i < 3; i++) {
+    const ringStart = HIT_TIME + i * 0.15;
+    const p = progress(t, ringStart, 0.9);
+    if (p <= 0 || p >= 1) continue;
+
+    const radius = 15 + easeOut(p) * 450;
+    const alpha = (1 - easeOut(p)) * 0.7;
+    const lw = 4 * (1 - p * 0.6);
+
+    ctx.save();
+    ctx.globalAlpha = alpha;
+    ctx.strokeStyle = i === 1 ? '#67E8F9' : '#A855F7';
+    ctx.lineWidth = lw;
+    ctx.shadowColor = ctx.strokeStyle;
+    ctx.shadowBlur = 25;
+    ctx.beginPath();
+    ctx.arc(IMPACT_X, IMPACT_Y, radius, 0, Math.PI * 2);
+    ctx.stroke();
+    ctx.restore();
+  }
+  ctx.globalAlpha = 1;
+}
+
+// ══════════ CANVAS: Impact flash ══════════
+function drawImpactFlash(t) {
+  if (t < HIT_TIME || t > HIT_TIME + 0.3) return;
+  const p = progress(t, HIT_TIME, 0.3);
+
+  // White center flash
+  const flashAlpha = (1 - easeOut(p)) * 0.5;
+  const fg = ctx.createRadialGradient(IMPACT_X, IMPACT_Y, 0, IMPACT_X, IMPACT_Y, 300 + p * 200);
+  fg.addColorStop(0, `rgba(255,255,255,${flashAlpha})`);
+  fg.addColorStop(0.3, `rgba(168,85,247,${flashAlpha * 0.5})`);
+  fg.addColorStop(1, 'transparent');
+  ctx.fillStyle = fg;
   ctx.fillRect(0, 0, W, H);
 
-  // Particles + connections
-  const positions = particles.map(p => getPos(p, angle));
-  for (let i = 0; i < particles.length; i++) {
-    for (let j = i + 1; j < particles.length; j++) {
-      const a = positions[i], b = positions[j];
-      const dx = a.x - b.x, dy = a.y - b.y;
-      const dist = Math.sqrt(dx * dx + dy * dy);
-      if (dist < 110) {
-        ctx.strokeStyle = `rgba(168,85,247,${(1 - dist/110) * 0.2})`;
-        ctx.lineWidth = 0.5;
-        ctx.beginPath();
-        ctx.moveTo(a.x, a.y);
-        ctx.lineTo(b.x, b.y);
-        ctx.stroke();
-      }
-    }
+  // Screen-wide purple tint at moment of impact
+  if (p < 0.15) {
+    ctx.fillStyle = `rgba(168,85,247,${0.2 * (1 - p / 0.15)})`;
+    ctx.fillRect(0, 0, W, H);
   }
-  for (let i = 0; i < particles.length; i++) {
-    const p = particles[i], pos = positions[i];
-    ctx.fillStyle = p.color;
-    ctx.globalAlpha = p.alpha;
-    ctx.beginPath();
-    ctx.arc(pos.x, pos.y, p.r, 0, Math.PI * 2);
-    ctx.fill();
-  }
-  ctx.globalAlpha = 1;
 }
 
-function drawCard(t) {
-  // Fade envelope
-  let cardAlpha = 1;
-  if (t < 0.4) cardAlpha = easeOut(t / 0.4);
-  else if (t > FADE_OUT_START) cardAlpha = Math.max(0, 1 - (t - FADE_OUT_START) / FADE_OUT_DUR);
-
-  if (cardAlpha <= 0) return;
-  ctx.globalAlpha = cardAlpha;
-
-  // Frosted glass card
+// ══════════ CANVAS: Post-processing ══════════
+function drawBloom() {
+  bctx.clearRect(0, 0, W, H);
+  bctx.filter = 'blur(14px) brightness(1.4)';
+  bctx.drawImage(canvas, 0, 0);
+  bctx.filter = 'none';
   ctx.save();
-  roundRect(ctx, CL, CT, CW, CH, 20);
-  ctx.clip();
-
-  // Card fill: semi-transparent dark
-  ctx.fillStyle = 'rgba(10, 10, 46, 0.75)';
-  ctx.fillRect(CL, CT, CW, CH);
-
-  // Subtle inner glow
-  const ig = ctx.createRadialGradient(CX, CY, 0, CX, CY, CW * 0.6);
-  ig.addColorStop(0, 'rgba(168, 85, 247, 0.04)');
-  ig.addColorStop(1, 'transparent');
-  ctx.fillStyle = ig;
-  ctx.fillRect(CL, CT, CW, CH);
-
+  ctx.globalCompositeOperation = 'screen';
+  ctx.globalAlpha = 0.25;
+  ctx.drawImage(bloomCanvas, 0, 0);
   ctx.restore();
+}
 
-  // Card border (gradient)
-  ctx.save();
-  const borderGrad = ctx.createLinearGradient(CL, CT, CL + CW, CT + CH);
-  const cycle = (t / 6) % 1;
-  borderGrad.addColorStop(0, lerpColor(cycle, COLORS));
-  borderGrad.addColorStop(1, lerpColor((cycle + 0.5) % 1, COLORS));
-  ctx.strokeStyle = borderGrad;
-  ctx.lineWidth = 1.5;
-  roundRect(ctx, CL, CT, CW, CH, 20);
-  ctx.stroke();
-  ctx.restore();
+function drawVignette() {
+  const vg = ctx.createRadialGradient(W/2, H/2, W * 0.3, W/2, H/2, W * 0.7);
+  vg.addColorStop(0, 'transparent');
+  vg.addColorStop(1, 'rgba(3,0,15,0.45)');
+  ctx.fillStyle = vg;
+  ctx.fillRect(0, 0, W, H);
+}
 
-  // Corner accents
-  ctx.strokeStyle = borderGrad;
-  ctx.lineWidth = 1.5;
-  const acc = 18, pad = 14;
-  drawCorner(CL + pad, CT + pad, acc, 'tl');
-  drawCorner(CL + CW - pad, CT + pad, acc, 'tr');
-  drawCorner(CL + pad, CT + CH - pad, acc, 'bl');
-  drawCorner(CL + CW - pad, CT + CH - pad, acc, 'br');
+// ══════════ DOM: Screen shake ══════════
+function applyScreenShake(t) {
+  if (t > HIT_TIME && t < HIT_TIME + SHAKE_DUR) {
+    const p = 1 - progress(t, HIT_TIME, SHAKE_DUR);
+    const intensity = p * p * 14;
+    const sx = Math.sin(t * 73.7) * intensity;
+    const sy = Math.cos(t * 91.3) * intensity;
+    $scene.style.transform = `translate(${sx}px, ${sy}px)`;
+  } else {
+    $scene.style.transform = 'none';
+  }
+}
 
-  // Title: "samson.init()"
-  const titleAlpha = t < 0.6 ? easeOut(t / 0.6) : 1;
-  ctx.globalAlpha = cardAlpha * titleAlpha;
-  ctx.font = 'bold 28px "Fira Code", "Consolas", monospace';
-  ctx.textAlign = 'center';
-  // Glow
-  ctx.shadowColor = '#A855F7';
-  ctx.shadowBlur = 15;
-  ctx.fillStyle = '#ffffff';
-  ctx.fillText('samson.init()', CX, CT + 55);
-  ctx.shadowBlur = 0;
+// ══════════ DOM: HUD updates ══════════
+function updateHUD(t) {
+  let alpha = 1;
+  if (t < FADE_IN) alpha = easeOut(t / FADE_IN);
+  else if (t > FADE_OUT) alpha = Math.max(0, 1 - easeOut((t - FADE_OUT) / 0.8));
+  $hud.style.opacity = alpha;
 
-  // Subtitle
-  ctx.font = '14px "Fira Code", "Consolas", monospace';
-  ctx.fillStyle = '#A855F7';
-  ctx.globalAlpha = cardAlpha * titleAlpha * 0.7;
-  ctx.fillText('Healthcare → Tech  ·  Software Engineer', CX, CT + 82);
-  ctx.globalAlpha = cardAlpha;
+  // Enemy HP (with percentage text)
+  const hpPct = t > HIT_TIME ? Math.max(0.22, 1 - easeOut(progress(t, HIT_TIME, 0.8)) * 0.78) : 1;
+  $enemyHp.style.width = (hpPct * 100) + '%';
+  $enemyHpVal.textContent = Math.round(hpPct * 100) + '%';
 
-  // Divider line
-  ctx.strokeStyle = 'rgba(168, 85, 247, 0.2)';
-  ctx.lineWidth = 1;
-  ctx.beginPath();
-  ctx.moveTo(CL + 40, CT + 98);
-  ctx.lineTo(CL + CW - 40, CT + 98);
-  ctx.stroke();
+  // Damage number
+  if (t > HIT_TIME && t < HIT_TIME + 2) {
+    const dmgP = progress(t, HIT_TIME, 0.4);
+    const dmgFade = 1 - progress(t, HIT_TIME + 1.2, 0.8);
+    $dmg.style.display = 'block';
+    $dmg.style.opacity = clamp01(dmgFade);
+    $dmg.style.top = (160 - easeOut(dmgP) * 60) + 'px';
+  } else {
+    $dmg.style.display = 'none';
+  }
 
-  // Stat bars
-  const barX = CL + 50;
-  const barW = CW - 100;
-  const barH = 22;
-  const startY = CT + 125;
-  const rowH = 52;
+  // MP drain on cast (420 → 280, costs 140 MP)
+  const MP_FULL = 420, MP_COST = 140;
+  const mpDrainP = progress(t, ATTACK_START, 0.5);
+  const mpCurrent = mpDrainP > 0 ? Math.round(MP_FULL - MP_COST * easeOut(mpDrainP)) : MP_FULL;
+  $mpFill.style.width = ((mpCurrent / MP_FULL) * 100) + '%';
+  $mpVal.textContent = mpCurrent + '/' + MP_FULL;
 
-  for (let i = 0; i < stats.length; i++) {
-    const s = stats[i];
-    const barStart = BAR_START + i * (BAR_DUR + BAR_GAP);
-    const barEnd = barStart + BAR_DUR;
+  // Command menu: Two-turn cycle
+  // Turn 1: cmd grid (0→1.6) → skill list (1.6→4.8)
+  // Turn 2: cmd grid (4.8→7.0) with new cursor cycle
+  let showSkills;
+  if (t < 1.6) {
+    showSkills = false;
+  } else if (t < 4.8) {
+    showSkills = true;
+  } else {
+    showSkills = false;
+  }
 
-    // Label appears slightly before bar fills
-    const labelProgress = Math.min(1, Math.max(0, (t - barStart + 0.15) / 0.25));
-    const fillProgress = Math.min(1, Math.max(0, (t - barStart) / BAR_DUR));
-    const easedFill = easeOut(fillProgress);
+  $cmdMain.style.visibility = showSkills ? 'hidden' : 'visible';
+  $cmdSkills.style.visibility = showSkills ? 'visible' : 'hidden';
 
-    const y = startY + i * rowH;
-
-    // Label
-    ctx.globalAlpha = cardAlpha * easeOut(labelProgress);
-    ctx.font = '13px "Fira Code", "Consolas", monospace';
-    ctx.textAlign = 'left';
-    ctx.fillStyle = s.color;
-    ctx.fillText(s.label, barX, y - 4);
-
-    // Value (right side)
-    ctx.textAlign = 'right';
-    ctx.fillStyle = '#ffffff';
-    ctx.globalAlpha = cardAlpha * easeOut(labelProgress) * 0.8;
-    ctx.fillText(s.value, barX + barW, y - 4);
-
-    // Bar track
-    ctx.globalAlpha = cardAlpha * easeOut(labelProgress);
-    ctx.fillStyle = 'rgba(255, 255, 255, 0.06)';
-    roundRect(ctx, barX, y + 2, barW, barH, 6);
-    ctx.fill();
-
-    // Bar fill
-    if (easedFill > 0) {
-      const fw = barW * s.pct * easedFill;
-      ctx.globalAlpha = cardAlpha;
-
-      // Glow behind bar
-      ctx.shadowColor = s.color;
-      ctx.shadowBlur = 12;
-
-      const barGrad = ctx.createLinearGradient(barX, 0, barX + fw, 0);
-      barGrad.addColorStop(0, s.color + '99');
-      barGrad.addColorStop(1, s.color);
-      ctx.fillStyle = barGrad;
-      roundRect(ctx, barX, y + 2, fw, barH, 6);
-      ctx.fill();
-      ctx.shadowBlur = 0;
-
-      // Percentage text inside bar
-      if (easedFill > 0.3 && fw > 50) {
-        ctx.font = 'bold 11px "Fira Code", monospace';
-        ctx.textAlign = 'right';
-        ctx.fillStyle = '#ffffff';
-        ctx.globalAlpha = cardAlpha * Math.min(1, (easedFill - 0.3) / 0.3);
-        ctx.fillText(Math.round(s.pct * 100) + '%', barX + fw - 8, y + 17);
+  if (!showSkills) {
+    let cmdIdx;
+    if (t < 1.6) {
+      // Turn 1: ATTACK → MAGIC → SKILLS
+      if (t < 0.6) cmdIdx = 0;
+      else if (t < 1.1) cmdIdx = 1;
+      else cmdIdx = 2;
+    } else {
+      // Turn 2: cycle through all four
+      const t2 = t - 4.8;
+      if (t2 < 0.5) cmdIdx = 0;
+      else if (t2 < 1.0) cmdIdx = 3;
+      else if (t2 < 1.5) cmdIdx = 1;
+      else cmdIdx = 2;
+    }
+    const labels = ['ATTACK','MAGIC','SKILLS','DEFEND'];
+    for (let i = 0; i < 4; i++) {
+      if (i === cmdIdx) {
+        $cmds[i].classList.add('active');
+        $cmds[i].innerHTML = '<span class="cmd-cursor">\u25B8</span>' + labels[i];
+      } else {
+        $cmds[i].classList.remove('active');
+        $cmds[i].textContent = labels[i];
       }
     }
   }
 
-  // Status line: "✓ ready to deploy"
-  const statusProgress = Math.min(1, Math.max(0, (t - STATUS_TIME) / 0.5));
-  if (statusProgress > 0) {
-    ctx.globalAlpha = cardAlpha * easeOut(statusProgress);
-    ctx.font = '14px "Fira Code", "Consolas", monospace';
-    ctx.textAlign = 'center';
-    ctx.fillStyle = '#4ADE80';
-    ctx.shadowColor = '#4ADE80';
-    ctx.shadowBlur = 10;
-    ctx.fillText('✓ ready to deploy', CX, CT + CH - 30);
-    ctx.shadowBlur = 0;
+  // Action text (FF-style window, typewriter — fades before damage hits)
+  const textP = progress(t, TEXT_START, TEXT_DUR);
+  const charCount = Math.floor(easeOut(textP) * ACTION_STR.length);
+  const textFade = t > HIT_TIME - 0.3 ? 1 - progress(t, HIT_TIME - 0.3, 0.3) : 1;
+  if (charCount > 0 && textFade > 0) {
+    $actionWin.style.display = 'block';
+    $actionWin.style.opacity = textFade;
+    $action.textContent = ACTION_STR.substring(0, charCount);
+  } else {
+    $actionWin.style.display = 'none';
   }
 
-  ctx.globalAlpha = 1;
+  applyScreenShake(t);
 }
 
-// Helpers
-function roundRect(ctx, x, y, w, h, r) {
-  ctx.beginPath();
-  ctx.moveTo(x + r, y);
-  ctx.lineTo(x + w - r, y);
-  ctx.quadraticCurveTo(x + w, y, x + w, y + r);
-  ctx.lineTo(x + w, y + h - r);
-  ctx.quadraticCurveTo(x + w, y + h, x + w - r, y + h);
-  ctx.lineTo(x + r, y + h);
-  ctx.quadraticCurveTo(x, y + h, x, y + h - r);
-  ctx.lineTo(x, y + r);
-  ctx.quadraticCurveTo(x, y, x + r, y);
-  ctx.closePath();
-}
-
-function drawCorner(x, y, len, pos) {
-  ctx.beginPath();
-  if (pos === 'tl') { ctx.moveTo(x, y + len); ctx.lineTo(x, y); ctx.lineTo(x + len, y); }
-  if (pos === 'tr') { ctx.moveTo(x - len, y); ctx.lineTo(x, y); ctx.lineTo(x, y + len); }
-  if (pos === 'bl') { ctx.moveTo(x, y - len); ctx.lineTo(x, y); ctx.lineTo(x + len, y); }
-  if (pos === 'br') { ctx.moveTo(x - len, y); ctx.lineTo(x, y); ctx.lineTo(x, y - len); }
-  ctx.stroke();
-}
-
-function lerpColor(t, colors) {
-  const idx = t * colors.length;
-  const i = Math.floor(idx) % colors.length;
-  return colors[i];
-}
-
-// Main render
+// ══════════ MAIN RENDER ══════════
 window.renderFrame = function(t) {
-  const angle = (2 * Math.PI * t) / DURATION;
-  drawBackground(angle);
-  drawCard(t);
+  drawBG(t);
+  drawSpeedLines(t);
+  drawShockwaves(t);
+  drawImpactFlash(t);
+  drawBloom();
+  drawVignette();
+  updateHUD(t);
 };
 
-// Browser preview (disabled during Puppeteer capture)
+// Browser preview
 let start = null;
 function animate(ts) {
   if (window._captureMode) return;

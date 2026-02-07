@@ -5,8 +5,8 @@ const fs = require('fs');
 const FPS = 20;
 const DURATION = 8; // seconds
 const TOTAL_FRAMES = FPS * DURATION; // 160
-const WIDTH = 800;
-const HEIGHT = 560;
+const WIDTH = 1200;
+const HEIGHT = 820;
 
 async function capture() {
   const framesDir = path.join(__dirname, 'frames');
@@ -26,7 +26,16 @@ async function capture() {
   await page.setViewport({ width: WIDTH, height: HEIGHT });
 
   const htmlPath = 'file://' + path.join(__dirname, 'intro.html');
-  await page.goto(htmlPath, { waitUntil: 'domcontentloaded' });
+  await page.goto(htmlPath, { waitUntil: 'networkidle0' });
+
+  // Wait for fonts + enemy image
+  await page.evaluate(() => document.fonts.ready);
+  await page.evaluate(() => {
+    return new Promise(resolve => {
+      if (window._imageLoaded) return resolve();
+      window._onImageLoad = resolve;
+    });
+  });
 
   // Stop the auto-play loop so it doesn't race with our deterministic renders
   await page.evaluate(() => { window._captureMode = true; });

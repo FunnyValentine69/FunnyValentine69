@@ -14,7 +14,7 @@ node capture.js
 
 # Step 2: Encode GIF
 echo "Step 2: Encoding GIF with gifski..."
-gifski --fps 20 --quality 100 -o "$OUTPUT" frames/frame_*.png
+gifski --fps 20 --width 645 --quality 90 -o "$OUTPUT" frames/frame_*.png
 
 # Step 3: Report
 SIZE=$(stat -f%z "$OUTPUT" 2>/dev/null || stat -c%s "$OUTPUT" 2>/dev/null)
@@ -25,6 +25,6 @@ echo "Output: $OUTPUT"
 echo "Size: ${SIZE_KB}KB"
 echo ""
 
-if [ "$SIZE_KB" -gt 3072 ]; then
-  echo "WARNING: GIF is over 3MB (${SIZE_KB}KB). Consider reducing quality or frame count."
+if [ "$SIZE_KB" -gt 10240 ]; then
+  echo "WARNING: GIF is over 10MB (${SIZE_KB}KB). GitHub won't accept this file."
 fi
