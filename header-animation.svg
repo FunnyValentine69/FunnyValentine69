@@ -176,7 +176,7 @@
 
   <!-- Tagline with animated gradient fill -->
   <text x="470" y="128" text-anchor="middle" font-family="'Fira Code', 'Consolas', monospace" font-size="14" fill="url(#accent)">
-    Healthcare → Tech  ·  AI-Assisted Developer
+    Healthcare → Tech  ·  Software Developer
   </text>
 
   <!-- Decorative divider -->

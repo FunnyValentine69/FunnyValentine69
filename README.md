@@ -15,7 +15,7 @@
 <ul>
   <li>🏥 <strong>Healthcare → Tech:</strong> 10+ yrs clinical experience in high-pressure environments (ED, alongside physicians)</li>
   <li>🎓 <strong>Education:</strong> MPH Epidemiology + MBA Finance & International Business</li>
-  <li>🤖 <strong>AI-Assisted Dev:</strong> Building with Claude as my co-pilot</li>
+  <li>💻 <strong>Building:</strong> Python, JavaScript, cloud infra, and data pipelines</li>
   <li>🌍 <strong>Based in:</strong> Vancouver, WA</li>
   <li>🎮 <strong>Off-hours:</strong> League of Legends enthusiast (150+ champs)</li>
   <li>🌐 <a href="https://funnyvalentine69.github.io/samson_portfolio/">View My Portfolio</a></li>
@@ -128,28 +128,28 @@
 class Developer:
     def __init__(self):
         self.background = ["Healthcare", "Business", "Public Health"]
-        self.approach = "AI-Assisted Development"
+        self.approach = "Problem-Driven Development"
         self.goal = "Build solutions that matter"
-    
+
     def work_smarter_not_harder(self):
         """
-        I don't just write code—I architect solutions 
-        with AI as my pair programmer.
-        The future of development is collaborative, 
-        and I'm here for it.
+        I don't just write code—I architect solutions
+        informed by real-world clinical experience.
+        Healthcare taught me to think in systems,
+        tech lets me build them.
         """
         while self.learning:
-            self.leverage_ai_tools()
+            self.identify_real_problems()
             self.ship_real_projects()
             self.iterate_and_improve()
-        
+
         return "Real solutions, shipped ✨"
 ```
 
 </td>
 <td width="1000" align="center">
 
-<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=14&duration=2500&pause=800&color=A855F7&center=true&vCenter=true&multiline=true&width=320&height=200&lines=%F0%9F%A7%A0+Think+Different;%F0%9F%A4%96+Build+with+AI;%F0%9F%9A%80+Ship+Fast;%F0%9F%94%81+Iterate+Always;%E2%9C%A8+Solve+Real+Problems" alt="Philosophy Animation"/>
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=14&duration=2500&pause=800&color=A855F7&center=true&vCenter=true&multiline=true&width=320&height=200&lines=%F0%9F%A7%A0+Think+Different;%F0%9F%92%A1+Build+Solutions;%F0%9F%9A%80+Ship+Fast;%F0%9F%94%81+Iterate+Always;%E2%9C%A8+Solve+Real+Problems" alt="Philosophy Animation"/>
 
 </td>
 </tr>
