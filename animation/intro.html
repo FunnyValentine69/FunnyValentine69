@@ -14,95 +14,76 @@
 const canvas = document.getElementById('c');
 const ctx = canvas.getContext('2d');
 const W = 800, H = 560;
-const DURATION = 8; // seconds for perfect loop
-const NUM_PARTICLES = 55;
-const CONNECT_DIST = 120;
+const DURATION = 8;
 
-// Seeded PRNG for deterministic results
+// Seeded PRNG
 let seed = 42;
 function rand() {
-  seed = (seed * 16807 + 0) % 2147483647;
+  seed = (seed * 16807) % 2147483647;
   return (seed - 1) / 2147483646;
 }
 
-// Color palette matching header
+// Particles (background atmosphere)
 const COLORS = ['#A855F7', '#06B6D4', '#EC4899'];
-
-// Generate particles with deterministic properties
 const particles = [];
-for (let i = 0; i < NUM_PARTICLES; i++) {
-  const isKey = i < 8; // first 8 are "key nodes" — larger with glow
+for (let i = 0; i < 40; i++) {
   particles.push({
-    baseX: rand() * W,
-    baseY: rand() * H,
-    ampX: 15 + rand() * 40,
-    ampY: 15 + rand() * 40,
-    phaseX: rand() * Math.PI * 2,
-    phaseY: rand() * Math.PI * 2,
-    r: isKey ? 2.5 + rand() * 1.5 : 1 + rand() * 1.2,
+    baseX: rand() * W, baseY: rand() * H,
+    ampX: 10 + rand() * 25, ampY: 10 + rand() * 25,
+    phaseX: rand() * Math.PI * 2, phaseY: rand() * Math.PI * 2,
+    r: 0.8 + rand() * 1.2,
     color: COLORS[Math.floor(rand() * COLORS.length)],
-    isKey: isKey,
-    alpha: isKey ? 0.9 : 0.5 + rand() * 0.3
+    alpha: 0.3 + rand() * 0.3
   });
 }
 
-// Nebula blobs (subtle background atmosphere)
-const nebulae = [];
-for (let i = 0; i < 4; i++) {
-  nebulae.push({
-    x: 100 + rand() * (W - 200),
-    y: 100 + rand() * (H - 200),
-    r: 120 + rand() * 100,
-    color: COLORS[i % COLORS.length],
-    phaseX: rand() * Math.PI * 2,
-    phaseY: rand() * Math.PI * 2,
-    ampX: 20 + rand() * 15,
-    ampY: 20 + rand() * 15
-  });
-}
-
-function getPos(p, t) {
-  const angle = (2 * Math.PI * t) / DURATION;
+function getPos(p, angle) {
   return {
     x: p.baseX + p.ampX * Math.sin(angle + p.phaseX),
     y: p.baseY + p.ampY * Math.sin(angle + p.phaseY)
   };
 }
 
-// Exposed for Puppeteer to call with exact time
-window.renderFrame = function(t) {
-  // Background with radial gradient
-  const bg = ctx.createRadialGradient(W / 2, H / 2, 0, W / 2, H / 2, W * 0.7);
+// Easing: smooth ease-out
+function easeOut(x) { return 1 - Math.pow(1 - x, 3); }
+
+// Stat bars config
+const stats = [
+  { label: 'clinical',  value: '10+ yrs',   pct: 0.92, color: '#A855F7', glowColor: 'rgba(168,85,247,' },
+  { label: 'education', value: 'MPH + MBA',  pct: 0.85, color: '#06B6D4', glowColor: 'rgba(6,182,212,' },
+  { label: 'building',  value: 'full-stack', pct: 0.80, color: '#EC4899', glowColor: 'rgba(236,72,153,' },
+  { label: 'shipped',   value: '10+ proj',   pct: 0.78, color: '#F59E0B', glowColor: 'rgba(245,158,11,' },
+];
+
+// Timeline (seconds): bars animate in sequence, then status line appears
+const BAR_START = 0.8;   // first bar starts filling
+const BAR_DUR = 0.7;     // each bar takes this long to fill
+const BAR_GAP = 0.3;     // gap between bar start times
+const STATUS_TIME = BAR_START + stats.length * (BAR_DUR + BAR_GAP) - BAR_GAP + 0.4;
+const FADE_OUT_START = 6.5;
+const FADE_OUT_DUR = 1.0;
+
+// Card dimensions
+const CX = W / 2, CY = H / 2;
+const CW = 520, CH = 360;
+const CL = CX - CW / 2, CT = CY - CH / 2;
+
+function drawBackground(angle) {
+  const bg = ctx.createRadialGradient(W/2, H/2, 0, W/2, H/2, W * 0.7);
   bg.addColorStop(0, '#0a0a2e');
   bg.addColorStop(1, '#030014');
   ctx.fillStyle = bg;
   ctx.fillRect(0, 0, W, H);
 
-  // Nebula blobs
-  const angle = (2 * Math.PI * t) / DURATION;
-  for (const n of nebulae) {
-    const nx = n.x + n.ampX * Math.sin(angle + n.phaseX);
-    const ny = n.y + n.ampY * Math.sin(angle + n.phaseY);
-    const grad = ctx.createRadialGradient(nx, ny, 0, nx, ny, n.r);
-    grad.addColorStop(0, n.color + '0A'); // very faint center
-    grad.addColorStop(0.5, n.color + '05');
-    grad.addColorStop(1, 'transparent');
-    ctx.fillStyle = grad;
-    ctx.fillRect(nx - n.r, ny - n.r, n.r * 2, n.r * 2);
-  }
-
-  // Calculate positions
-  const positions = particles.map(p => getPos(p, t));
-
-  // Draw connection lines
-  for (let i = 0; i < NUM_PARTICLES; i++) {
-    for (let j = i + 1; j < NUM_PARTICLES; j++) {
+  // Particles + connections
+  const positions = particles.map(p => getPos(p, angle));
+  for (let i = 0; i < particles.length; i++) {
+    for (let j = i + 1; j < particles.length; j++) {
       const a = positions[i], b = positions[j];
       const dx = a.x - b.x, dy = a.y - b.y;
       const dist = Math.sqrt(dx * dx + dy * dy);
-      if (dist < CONNECT_DIST) {
-        const opacity = (1 - dist / CONNECT_DIST) * 0.35;
-        ctx.strokeStyle = `rgba(168, 85, 247, ${opacity})`;
+      if (dist < 110) {
+        ctx.strokeStyle = `rgba(168,85,247,${(1 - dist/110) * 0.2})`;
         ctx.lineWidth = 0.5;
         ctx.beginPath();
         ctx.moveTo(a.x, a.y);
@@ -111,36 +92,215 @@ window.renderFrame = function(t) {
       }
     }
   }
-
-  // Draw particles
-  for (let i = 0; i < NUM_PARTICLES; i++) {
-    const p = particles[i];
-    const pos = positions[i];
-
-    // Glow for key nodes
-    if (p.isKey) {
-      const glow = ctx.createRadialGradient(pos.x, pos.y, 0, pos.x, pos.y, p.r * 6);
-      glow.addColorStop(0, p.color + '30');
-      glow.addColorStop(1, 'transparent');
-      ctx.fillStyle = glow;
-      ctx.beginPath();
-      ctx.arc(pos.x, pos.y, p.r * 6, 0, Math.PI * 2);
-      ctx.fill();
-    }
-
-    // Particle dot
+  for (let i = 0; i < particles.length; i++) {
+    const p = particles[i], pos = positions[i];
     ctx.fillStyle = p.color;
     ctx.globalAlpha = p.alpha;
     ctx.beginPath();
     ctx.arc(pos.x, pos.y, p.r, 0, Math.PI * 2);
     ctx.fill();
-    ctx.globalAlpha = 1;
   }
+  ctx.globalAlpha = 1;
+}
+
+function drawCard(t) {
+  // Fade envelope
+  let cardAlpha = 1;
+  if (t < 0.4) cardAlpha = easeOut(t / 0.4);
+  else if (t > FADE_OUT_START) cardAlpha = Math.max(0, 1 - (t - FADE_OUT_START) / FADE_OUT_DUR);
+
+  if (cardAlpha <= 0) return;
+  ctx.globalAlpha = cardAlpha;
+
+  // Frosted glass card
+  ctx.save();
+  roundRect(ctx, CL, CT, CW, CH, 20);
+  ctx.clip();
+
+  // Card fill: semi-transparent dark
+  ctx.fillStyle = 'rgba(10, 10, 46, 0.75)';
+  ctx.fillRect(CL, CT, CW, CH);
+
+  // Subtle inner glow
+  const ig = ctx.createRadialGradient(CX, CY, 0, CX, CY, CW * 0.6);
+  ig.addColorStop(0, 'rgba(168, 85, 247, 0.04)');
+  ig.addColorStop(1, 'transparent');
+  ctx.fillStyle = ig;
+  ctx.fillRect(CL, CT, CW, CH);
+
+  ctx.restore();
+
+  // Card border (gradient)
+  ctx.save();
+  const borderGrad = ctx.createLinearGradient(CL, CT, CL + CW, CT + CH);
+  const cycle = (t / 6) % 1;
+  borderGrad.addColorStop(0, lerpColor(cycle, COLORS));
+  borderGrad.addColorStop(1, lerpColor((cycle + 0.5) % 1, COLORS));
+  ctx.strokeStyle = borderGrad;
+  ctx.lineWidth = 1.5;
+  roundRect(ctx, CL, CT, CW, CH, 20);
+  ctx.stroke();
+  ctx.restore();
+
+  // Corner accents
+  ctx.strokeStyle = borderGrad;
+  ctx.lineWidth = 1.5;
+  const acc = 18, pad = 14;
+  drawCorner(CL + pad, CT + pad, acc, 'tl');
+  drawCorner(CL + CW - pad, CT + pad, acc, 'tr');
+  drawCorner(CL + pad, CT + CH - pad, acc, 'bl');
+  drawCorner(CL + CW - pad, CT + CH - pad, acc, 'br');
+
+  // Title: "samson.init()"
+  const titleAlpha = t < 0.6 ? easeOut(t / 0.6) : 1;
+  ctx.globalAlpha = cardAlpha * titleAlpha;
+  ctx.font = 'bold 28px "Fira Code", "Consolas", monospace';
+  ctx.textAlign = 'center';
+  // Glow
+  ctx.shadowColor = '#A855F7';
+  ctx.shadowBlur = 15;
+  ctx.fillStyle = '#ffffff';
+  ctx.fillText('samson.init()', CX, CT + 55);
+  ctx.shadowBlur = 0;
+
+  // Subtitle
+  ctx.font = '14px "Fira Code", "Consolas", monospace';
+  ctx.fillStyle = '#A855F7';
+  ctx.globalAlpha = cardAlpha * titleAlpha * 0.7;
+  ctx.fillText('Healthcare → Tech  ·  Software Engineer', CX, CT + 82);
+  ctx.globalAlpha = cardAlpha;
+
+  // Divider line
+  ctx.strokeStyle = 'rgba(168, 85, 247, 0.2)';
+  ctx.lineWidth = 1;
+  ctx.beginPath();
+  ctx.moveTo(CL + 40, CT + 98);
+  ctx.lineTo(CL + CW - 40, CT + 98);
+  ctx.stroke();
+
+  // Stat bars
+  const barX = CL + 50;
+  const barW = CW - 100;
+  const barH = 22;
+  const startY = CT + 125;
+  const rowH = 52;
+
+  for (let i = 0; i < stats.length; i++) {
+    const s = stats[i];
+    const barStart = BAR_START + i * (BAR_DUR + BAR_GAP);
+    const barEnd = barStart + BAR_DUR;
+
+    // Label appears slightly before bar fills
+    const labelProgress = Math.min(1, Math.max(0, (t - barStart + 0.15) / 0.25));
+    const fillProgress = Math.min(1, Math.max(0, (t - barStart) / BAR_DUR));
+    const easedFill = easeOut(fillProgress);
+
+    const y = startY + i * rowH;
+
+    // Label
+    ctx.globalAlpha = cardAlpha * easeOut(labelProgress);
+    ctx.font = '13px "Fira Code", "Consolas", monospace';
+    ctx.textAlign = 'left';
+    ctx.fillStyle = s.color;
+    ctx.fillText(s.label, barX, y - 4);
+
+    // Value (right side)
+    ctx.textAlign = 'right';
+    ctx.fillStyle = '#ffffff';
+    ctx.globalAlpha = cardAlpha * easeOut(labelProgress) * 0.8;
+    ctx.fillText(s.value, barX + barW, y - 4);
+
+    // Bar track
+    ctx.globalAlpha = cardAlpha * easeOut(labelProgress);
+    ctx.fillStyle = 'rgba(255, 255, 255, 0.06)';
+    roundRect(ctx, barX, y + 2, barW, barH, 6);
+    ctx.fill();
+
+    // Bar fill
+    if (easedFill > 0) {
+      const fw = barW * s.pct * easedFill;
+      ctx.globalAlpha = cardAlpha;
+
+      // Glow behind bar
+      ctx.shadowColor = s.color;
+      ctx.shadowBlur = 12;
+
+      const barGrad = ctx.createLinearGradient(barX, 0, barX + fw, 0);
+      barGrad.addColorStop(0, s.color + '99');
+      barGrad.addColorStop(1, s.color);
+      ctx.fillStyle = barGrad;
+      roundRect(ctx, barX, y + 2, fw, barH, 6);
+      ctx.fill();
+      ctx.shadowBlur = 0;
+
+      // Percentage text inside bar
+      if (easedFill > 0.3 && fw > 50) {
+        ctx.font = 'bold 11px "Fira Code", monospace';
+        ctx.textAlign = 'right';
+        ctx.fillStyle = '#ffffff';
+        ctx.globalAlpha = cardAlpha * Math.min(1, (easedFill - 0.3) / 0.3);
+        ctx.fillText(Math.round(s.pct * 100) + '%', barX + fw - 8, y + 17);
+      }
+    }
+  }
+
+  // Status line: "✓ ready to deploy"
+  const statusProgress = Math.min(1, Math.max(0, (t - STATUS_TIME) / 0.5));
+  if (statusProgress > 0) {
+    ctx.globalAlpha = cardAlpha * easeOut(statusProgress);
+    ctx.font = '14px "Fira Code", "Consolas", monospace';
+    ctx.textAlign = 'center';
+    ctx.fillStyle = '#4ADE80';
+    ctx.shadowColor = '#4ADE80';
+    ctx.shadowBlur = 10;
+    ctx.fillText('✓ ready to deploy', CX, CT + CH - 30);
+    ctx.shadowBlur = 0;
+  }
+
+  ctx.globalAlpha = 1;
+}
+
+// Helpers
+function roundRect(ctx, x, y, w, h, r) {
+  ctx.beginPath();
+  ctx.moveTo(x + r, y);
+  ctx.lineTo(x + w - r, y);
+  ctx.quadraticCurveTo(x + w, y, x + w, y + r);
+  ctx.lineTo(x + w, y + h - r);
+  ctx.quadraticCurveTo(x + w, y + h, x + w - r, y + h);
+  ctx.lineTo(x + r, y + h);
+  ctx.quadraticCurveTo(x, y + h, x, y + h - r);
+  ctx.lineTo(x, y + r);
+  ctx.quadraticCurveTo(x, y, x + r, y);
+  ctx.closePath();
+}
+
+function drawCorner(x, y, len, pos) {
+  ctx.beginPath();
+  if (pos === 'tl') { ctx.moveTo(x, y + len); ctx.lineTo(x, y); ctx.lineTo(x + len, y); }
+  if (pos === 'tr') { ctx.moveTo(x - len, y); ctx.lineTo(x, y); ctx.lineTo(x, y + len); }
+  if (pos === 'bl') { ctx.moveTo(x, y - len); ctx.lineTo(x, y); ctx.lineTo(x + len, y); }
+  if (pos === 'br') { ctx.moveTo(x - len, y); ctx.lineTo(x, y); ctx.lineTo(x, y - len); }
+  ctx.stroke();
+}
+
+function lerpColor(t, colors) {
+  const idx = t * colors.length;
+  const i = Math.floor(idx) % colors.length;
+  return colors[i];
+}
+
+// Main render
+window.renderFrame = function(t) {
+  const angle = (2 * Math.PI * t) / DURATION;
+  drawBackground(angle);
+  drawCard(t);
 };
 
-// Auto-play for browser preview (not used during capture)
+// Browser preview (disabled during Puppeteer capture)
 let start = null;
 function animate(ts) {
+  if (window._captureMode) return;
   if (!start) start = ts;
   const t = ((ts - start) / 1000) % DURATION;
   window.renderFrame(t);

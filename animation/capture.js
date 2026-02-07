@@ -28,8 +28,9 @@ async function capture() {
   const htmlPath = 'file://' + path.join(__dirname, 'intro.html');
   await page.goto(htmlPath, { waitUntil: 'domcontentloaded' });
 
-  // Small delay to ensure canvas is ready
-  await new Promise(r => setTimeout(r, 200));
+  // Stop the auto-play loop so it doesn't race with our deterministic renders
+  await page.evaluate(() => { window._captureMode = true; });
+  await new Promise(r => setTimeout(r, 100));
 
   for (let i = 0; i < TOTAL_FRAMES; i++) {
     const t = (i / TOTAL_FRAMES) * DURATION;

@@ -14,7 +14,7 @@ node capture.js
 
 # Step 2: Encode GIF
 echo "Step 2: Encoding GIF with gifski..."
-gifski --fps 20 --width 400 --quality 80 -o "$OUTPUT" frames/frame_*.png
+gifski --fps 20 --quality 100 -o "$OUTPUT" frames/frame_*.png
 
 # Step 3: Report
 SIZE=$(stat -f%z "$OUTPUT" 2>/dev/null || stat -c%s "$OUTPUT" 2>/dev/null)
