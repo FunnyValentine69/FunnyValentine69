@@ -16,7 +16,7 @@
 - 💻 **Building:** Trading systems, ML models, and AI applications in Python & R
 - 🌍 **Based in:** Vancouver, WA
 - 🎮 **Off-hours:** League of Legends enthusiast (150+ champs)
-- 🔭 **Currently exploring:** Applied machine learning in quantitative finance
+- 🔭 **Currently exploring:** Trading systems, AI applications & health data tools
 - 🌐 [View My Portfolio](https://funnyvalentine69.github.io/samson_portfolio/)
 
 <p align="center">
