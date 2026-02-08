@@ -65,6 +65,9 @@
 ![Algorithmic Trading](https://img.shields.io/badge/Algorithmic%20Trading-0d1117?style=for-the-badge&logo=bitcoin&logoColor=F7931A)
 ![Options Pricing](https://img.shields.io/badge/Options%20Pricing-4A154B?style=for-the-badge&logo=greek-letters&logoColor=white)
 ![Backtesting](https://img.shields.io/badge/Backtesting-006400?style=for-the-badge&logo=clockify&logoColor=white)
+![Machine Learning](https://img.shields.io/badge/Machine%20Learning-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
+![Shiny](https://img.shields.io/badge/Shiny-276DC3?style=for-the-badge&logo=r&logoColor=white)
+![RMarkdown](https://img.shields.io/badge/RMarkdown-276DC3?style=for-the-badge&logo=r&logoColor=white)
 
 </td>
 <td style="width:50%;" width="500" valign="center">
