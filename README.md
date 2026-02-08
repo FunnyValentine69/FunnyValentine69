@@ -96,7 +96,7 @@
 ## 📊 GitHub Stats
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=FunnyValentine69&show_icons=true&theme=radical&bg_color=0D1117&text_color=C9D1D9&title_color=A855F7&icon_color=A855F7&border_color=30363d" alt="GitHub Stats" />
+  <img src="https://github-readme-stats-one-bice.vercel.app/api?username=FunnyValentine69&show_icons=true&theme=radical&bg_color=0D1117&text_color=C9D1D9&title_color=A855F7&icon_color=A855F7&border_color=30363d" alt="GitHub Stats" />
   &nbsp;&nbsp;
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=FunnyValentine69&theme=radical&background=0D1117&ring=A855F7&fire=A855F7&currStreakLabel=A855F7&border=30363d" alt="GitHub Streak" />
 </p>
