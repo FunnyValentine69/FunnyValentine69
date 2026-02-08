@@ -146,8 +146,8 @@
 ## 📊 GitHub Stats
 
 <p align="center">
-  <img src="https://github-readme-stats-one-bice.vercel.app/api?username=FunnyValentine69&show_icons=true&hide_title=true&hide=contribs&theme=radical&bg_color=0D1117&text_color=C9D1D9&title_color=A855F7&icon_color=A855F7&border_color=30363d" alt="GitHub Stats" width="49%" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=FunnyValentine69&theme=radical&background=0D1117&ring=A855F7&fire=A855F7&currStreakLabel=A855F7&border=30363d" alt="GitHub Streak" width="49%" />
+  <img src="https://github-readme-stats-one-bice.vercel.app/api?username=FunnyValentine69&show_icons=true&hide_title=true&hide=contribs&theme=radical&bg_color=0D1117&text_color=C9D1D9&title_color=A855F7&icon_color=A855F7&border_color=30363d" alt="GitHub Stats" height="180" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=FunnyValentine69&theme=radical&background=0D1117&ring=A855F7&fire=A855F7&currStreakLabel=A855F7&border=30363d" alt="GitHub Streak" height="180" />
 </p>
 
 ---
