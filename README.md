@@ -1,4 +1,3 @@
-<!-- NEW -->
 <p align="center">
   <img src="./header-animation.svg" width="940" alt="Samson's Dev Journey" />
 </p>
@@ -18,7 +17,8 @@
   <li>💻 <strong>Building:</strong> Trading systems, ML models, and AI applications in Python & R</li>
   <li>🌍 <strong>Based in:</strong> Vancouver, WA</li>
   <li>🎮 <strong>Off-hours:</strong> League of Legends enthusiast (150+ champs)</li>
-  <li>🌐 <a href="https://funnyvalentine69.github.io/samson_portfolio/">View My Portfolio</a></li>
+  <li>🔭 <strong>Currently exploring:</strong> Applied machine learning in quantitative finance</li>
+  <li>🌐 <a href="https://funnyvalentine69.github.io/samson_portfolio/" target="_blank">View My Portfolio</a></li>
 </ul>
 
 <p align="center">
@@ -28,6 +28,8 @@
 ---
 
 ## 📈 Trading Systems
+
+> Systems I've built for quantitative trading and market analysis
 
 | Project | Description | Tech |
 |---------|-------------|------|
@@ -138,16 +140,14 @@
 ![Hugging Face](https://img.shields.io/badge/Hugging%20Face-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)
 ![Stable Diffusion](https://img.shields.io/badge/Stable%20Diffusion-A855F7?style=for-the-badge&logo=pytorch&logoColor=white)
 ![ComfyUI](https://img.shields.io/badge/ComfyUI-222222?style=for-the-badge&logo=comfyui&logoColor=white)
+
+**Data Visualization**<br>
 ![Tableau](https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=Tableau&logoColor=white)
 ![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
 
 ---
 
 ## 💭 My Development Philosophy
-
-<table>
-<tr>
-<td style="width:5%;" width="10" valign="center">
 
 ```python
 class Developer:
@@ -170,15 +170,6 @@ class Developer:
 
         return "Real solutions, shipped ✨"
 ```
-
-</td>
-<td width="1000" align="center">
-
-<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=14&duration=2500&pause=800&color=A855F7&center=true&vCenter=true&multiline=true&width=320&height=200&lines=%F0%9F%A7%A0+Think+Different;%F0%9F%92%A1+Build+Solutions;%F0%9F%9A%80+Ship+Fast;%F0%9F%94%81+Iterate+Always;%E2%9C%A8+Solve+Real+Problems" alt="Philosophy Animation"/>
-
-</td>
-</tr>
-</table>
 
 ---
 
