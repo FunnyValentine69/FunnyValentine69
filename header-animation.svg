@@ -165,7 +165,7 @@
   <!-- ══════════ LAYER 5: CONTENT ══════════ -->
 
   <!-- Code-style greeting -->
-  <text x="470" y="42" text-anchor="middle" font-family="'Fira Code', 'Consolas', monospace" font-size="12" fill="url(#accent)" opacity="0.7">
+  <text x="470" y="42" text-anchor="middle" font-family="'Fira Code', 'Consolas', monospace" font-size="14" fill="url(#accent)" opacity="0.7">
     &lt; samson.dev /&gt;
   </text>
 
@@ -175,14 +175,14 @@
   </text>
 
   <!-- Tagline with animated gradient fill -->
-  <text x="470" y="114" text-anchor="middle" font-family="'Fira Code', 'Consolas', monospace" font-size="14" fill="url(#accent)">
+  <text x="470" y="114" text-anchor="middle" font-family="'Fira Code', 'Consolas', monospace" font-size="16" fill="url(#accent)">
     Healthcare → Tech  ·  Software Developer
   </text>
 
   <!-- Decorative divider -->
   <g opacity="0.4">
     <line x1="350" y1="135" x2="455" y2="135" stroke="url(#accent)" stroke-width="0.8"/>
-    <text x="470" y="139" text-anchor="middle" font-size="10" fill="url(#accent)">✦</text>
+    <text x="470" y="139" text-anchor="middle" font-size="12" fill="url(#accent)">✦</text>
     <line x1="485" y1="135" x2="590" y2="135" stroke="url(#accent)" stroke-width="0.8"/>
   </g>
 
@@ -191,22 +191,22 @@
     <!-- 🏥 Healthcare — center 245 -->
     <g transform="translate(245, 165)">
       <rect x="-57" y="-17" width="114" height="34" rx="8" fill="#A855F7" fill-opacity="0.08" stroke="#A855F7" stroke-width="0.6" stroke-opacity="0.3"/>
-      <text x="0" y="5" font-family="'Fira Code', monospace" font-size="11" fill="#C4B5FD"><tspan font-size="13">🏥</tspan>  10+ Yrs</text>
+      <text x="0" y="5" font-family="'Fira Code', monospace" font-size="13" fill="#C4B5FD"><tspan font-size="15">🏥</tspan>  10+ Yrs</text>
     </g>
     <!-- 🎓 Education — center 395 -->
     <g transform="translate(395, 165)">
       <rect x="-57" y="-17" width="114" height="34" rx="8" fill="#06B6D4" fill-opacity="0.08" stroke="#06B6D4" stroke-width="0.6" stroke-opacity="0.3"/>
-      <text x="0" y="5" font-family="'Fira Code', monospace" font-size="11" fill="#67E8F9"><tspan font-size="13">🎓</tspan>  MPH+MBA</text>
+      <text x="0" y="5" font-family="'Fira Code', monospace" font-size="13" fill="#67E8F9"><tspan font-size="15">🎓</tspan>  MPH+MBA</text>
     </g>
     <!-- 🚀 Projects — center 545 -->
     <g transform="translate(545, 165)">
       <rect x="-57" y="-17" width="114" height="34" rx="8" fill="#EC4899" fill-opacity="0.08" stroke="#EC4899" stroke-width="0.6" stroke-opacity="0.3"/>
-      <text x="0" y="5" font-family="'Fira Code', monospace" font-size="11" fill="#F9A8D4"><tspan font-size="13">🚀</tspan>  10+ Proj</text>
+      <text x="0" y="5" font-family="'Fira Code', monospace" font-size="13" fill="#F9A8D4"><tspan font-size="15">🚀</tspan>  10+ Proj</text>
     </g>
     <!-- ⌨️ WPM — center 695 -->
     <g transform="translate(695, 165)">
       <rect x="-57" y="-17" width="114" height="34" rx="8" fill="#F59E0B" fill-opacity="0.08" stroke="#F59E0B" stroke-width="0.6" stroke-opacity="0.3"/>
-      <text x="0" y="5" font-family="'Fira Code', monospace" font-size="11" fill="#FCD34D"><tspan font-size="13">⌨️</tspan>  100+ WPM</text>
+      <text x="0" y="5" font-family="'Fira Code', monospace" font-size="13" fill="#FCD34D"><tspan font-size="15">⌨️</tspan>  100+ WPM</text>
     </g>
   </g>
 </svg>
