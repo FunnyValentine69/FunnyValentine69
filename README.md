@@ -11,15 +11,13 @@
 
 ## Hi, I'm Samson 👋
 
-<ul>
-  <li>🏥 <strong>Healthcare → Tech:</strong> 10+ yrs clinical experience in high-pressure environments (ED, alongside physicians)</li>
-  <li>🎓 <strong>Education:</strong> MPH Epidemiology + MBA Finance & International Business</li>
-  <li>💻 <strong>Building:</strong> Trading systems, ML models, and AI applications in Python & R</li>
-  <li>🌍 <strong>Based in:</strong> Vancouver, WA</li>
-  <li>🎮 <strong>Off-hours:</strong> League of Legends enthusiast (150+ champs)</li>
-  <li>🔭 <strong>Currently exploring:</strong> Applied machine learning in quantitative finance</li>
-  <li>🌐 <a href="https://funnyvalentine69.github.io/samson_portfolio/">View My Portfolio</a></li>
-</ul>
+- 🏥 **Healthcare → Tech:** 10+ yrs clinical experience in high-pressure environments (ED, alongside physicians)
+- 🎓 **Education:** MPH Epidemiology + MBA Finance & International Business
+- 💻 **Building:** Trading systems, ML models, and AI applications in Python & R
+- 🌍 **Based in:** Vancouver, WA
+- 🎮 **Off-hours:** League of Legends enthusiast (150+ champs)
+- 🔭 **Currently exploring:** Applied machine learning in quantitative finance
+- 🌐 [View My Portfolio](https://funnyvalentine69.github.io/samson_portfolio/)
 
 <p align="center">
   <img src="./intro-animation.gif" width="940" alt="Samson's Journey Animation"/>
