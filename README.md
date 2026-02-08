@@ -18,7 +18,7 @@
   <li>🌍 <strong>Based in:</strong> Vancouver, WA</li>
   <li>🎮 <strong>Off-hours:</strong> League of Legends enthusiast (150+ champs)</li>
   <li>🔭 <strong>Currently exploring:</strong> Applied machine learning in quantitative finance</li>
-  <li>🌐 <a href="https://funnyvalentine69.github.io/samson_portfolio/" target="_blank">View My Portfolio</a></li>
+  <li>🌐 <a href="https://funnyvalentine69.github.io/samson_portfolio/">View My Portfolio</a></li>
 </ul>
 
 <p align="center">
