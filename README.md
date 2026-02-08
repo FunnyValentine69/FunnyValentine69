@@ -15,7 +15,7 @@
 <ul>
   <li>🏥 <strong>Healthcare → Tech:</strong> 10+ yrs clinical experience in high-pressure environments (ED, alongside physicians)</li>
   <li>🎓 <strong>Education:</strong> MPH Epidemiology + MBA Finance & International Business</li>
-  <li>💻 <strong>Building:</strong> Python, JavaScript, cloud infra, and data pipelines</li>
+  <li>💻 <strong>Building:</strong> Trading systems, ML models, and AI applications in Python & R</li>
   <li>🌍 <strong>Based in:</strong> Vancouver, WA</li>
   <li>🎮 <strong>Off-hours:</strong> League of Legends enthusiast (150+ champs)</li>
   <li>🌐 <a href="https://funnyvalentine69.github.io/samson_portfolio/">View My Portfolio</a></li>
@@ -33,6 +33,7 @@
 <tr>
 <td style="width:50%;" width="760" valign="center">
 
+**Languages**<br>
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
@@ -41,33 +42,43 @@
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 ![Bash](https://img.shields.io/badge/bash-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white)
+
+**ML / Data Science**<br>
 ![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white)
 ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
 ![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white)
-![Tableau](https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=Tableau&logoColor=white)
-![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
+![SciPy](https://img.shields.io/badge/SciPy-%230C55A5.svg?style=for-the-badge&logo=scipy&logoColor=white)
+![Pillow](https://img.shields.io/badge/Pillow-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Machine Learning](https://img.shields.io/badge/Machine%20Learning-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
+![Shiny](https://img.shields.io/badge/Shiny-276DC3?style=for-the-badge&logo=r&logoColor=white)
+![RMarkdown](https://img.shields.io/badge/RMarkdown-276DC3?style=for-the-badge&logo=r&logoColor=white)
+
+**Trading / Finance**<br>
+![Quantitative Finance](https://img.shields.io/badge/Quantitative%20Finance-1a1a2e?style=for-the-badge&logo=cashapp&logoColor=00C853)
+![Algorithmic Trading](https://img.shields.io/badge/Algorithmic%20Trading-0d1117?style=for-the-badge&logo=bitcoin&logoColor=F7931A)
+![Options Pricing](https://img.shields.io/badge/Options%20Pricing-4A154B?style=for-the-badge&logo=greek-letters&logoColor=white)
+![Backtesting](https://img.shields.io/badge/Backtesting-006400?style=for-the-badge&logo=clockify&logoColor=white)
+
+**Web / Frontend**<br>
 ![Node.js](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
+![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
+![jQuery](https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white)
+
+**DevOps / Tools**<br>
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white)
+![pytest](https://img.shields.io/badge/pytest-%23ffffff.svg?style=for-the-badge&logo=pytest&logoColor=2f9fe3)
+
+**AI Tools**<br>
 ![Claude Code](https://img.shields.io/badge/Claude_Code-191919?style=for-the-badge&logo=anthropic&logoColor=white)
 ![GitHub Copilot](https://img.shields.io/badge/GitHub_Copilot-000000?style=for-the-badge&logo=github&logoColor=white)
 ![Ollama](https://img.shields.io/badge/Ollama-000000?style=for-the-badge&logo=ollama&logoColor=white)
 ![Hugging Face](https://img.shields.io/badge/Hugging%20Face-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)
 ![Stable Diffusion](https://img.shields.io/badge/Stable%20Diffusion-A855F7?style=for-the-badge&logo=pytorch&logoColor=white)
 ![ComfyUI](https://img.shields.io/badge/ComfyUI-222222?style=for-the-badge&logo=comfyui&logoColor=white)
-![SciPy](https://img.shields.io/badge/SciPy-%230C55A5.svg?style=for-the-badge&logo=scipy&logoColor=white)
-![Pillow](https://img.shields.io/badge/Pillow-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
-![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
-![jQuery](https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white)
-![pytest](https://img.shields.io/badge/pytest-%23ffffff.svg?style=for-the-badge&logo=pytest&logoColor=2f9fe3)
-![Quantitative Finance](https://img.shields.io/badge/Quantitative%20Finance-1a1a2e?style=for-the-badge&logo=cashapp&logoColor=00C853)
-![Algorithmic Trading](https://img.shields.io/badge/Algorithmic%20Trading-0d1117?style=for-the-badge&logo=bitcoin&logoColor=F7931A)
-![Options Pricing](https://img.shields.io/badge/Options%20Pricing-4A154B?style=for-the-badge&logo=greek-letters&logoColor=white)
-![Backtesting](https://img.shields.io/badge/Backtesting-006400?style=for-the-badge&logo=clockify&logoColor=white)
-![Machine Learning](https://img.shields.io/badge/Machine%20Learning-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
-![Shiny](https://img.shields.io/badge/Shiny-276DC3?style=for-the-badge&logo=r&logoColor=white)
-![RMarkdown](https://img.shields.io/badge/RMarkdown-276DC3?style=for-the-badge&logo=r&logoColor=white)
+![Tableau](https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=Tableau&logoColor=white)
+![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
 
 </td>
 <td style="width:50%;" width="500" valign="center">
@@ -79,6 +90,20 @@
 </td>
 </tr>
 </table>
+
+---
+
+## 📊 GitHub Stats
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=FunnyValentine69&show_icons=true&theme=radical&bg_color=0D1117&text_color=C9D1D9&title_color=A855F7&icon_color=A855F7&border_color=30363d" alt="GitHub Stats" />
+  &nbsp;&nbsp;
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=FunnyValentine69&theme=radical&background=0D1117&ring=A855F7&fire=A855F7&currStreakLabel=A855F7&border=30363d" alt="GitHub Streak" />
+</p>
+
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=FunnyValentine69&theme=react-dark&bg_color=0D1117&color=C9D1D9&line=A855F7&point=A855F7&area_color=A855F7&area=true&hide_border=true" alt="Contribution Graph" width="940" />
+</p>
 
 ---
 
@@ -137,6 +162,16 @@
 
 ---
 
+## 📈 Trading Systems (Private)
+
+| Project | Description | Tech |
+|---------|-------------|------|
+| **Robinhood Companion** | Automated options signal system with real-time market scanning & mobile alerts | `Python` `SciPy` `pandas` `pytest` |
+| **Trading Intelligence** | Multi-source market intelligence aggregator with scoring engine | `Python` `requests` `pandas` |
+| **Options Trading Bot** | ML-powered options trading bot with live monitoring dashboard | `R` `tidymodels` `Shiny` `quantmod` |
+
+---
+
 ## 💭 My Development Philosophy
 
 <table>
@@ -146,16 +181,16 @@
 ```python
 class Developer:
     def __init__(self):
-        self.background = ["Healthcare", "Business", "Public Health"]
+        self.background = ["Healthcare", "Finance", "Public Health"]
         self.approach = "Problem-Driven Development"
         self.goal = "Build solutions that matter"
 
     def work_smarter_not_harder(self):
         """
-        I don't just write code—I architect solutions
-        informed by real-world clinical experience.
-        Healthcare taught me to think in systems,
-        tech lets me build them.
+        From clinical triage to market signals—
+        I build systems that turn data into decisions.
+        Healthcare taught me to think under pressure,
+        finance taught me to quantify risk.
         """
         while self.learning:
             self.identify_real_problems()
