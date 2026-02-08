@@ -151,10 +151,6 @@
   <img src="https://github-readme-stats-one-bice.vercel.app/api/top-langs/?username=FunnyValentine69&layout=compact&theme=radical&bg_color=0D1117&text_color=C9D1D9&title_color=A855F7&exclude_repo=samson_portfolio&langs_count=8" alt="Top Languages" width="33%" />
 </p>
 
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=FunnyValentine69&theme=react-dark&bg_color=0D1117&color=C9D1D9&line=A855F7&point=A855F7&area_color=A855F7&area=true&hide_border=true" alt="Contribution Graph" width="940" />
-</p>
-
 ---
 
 ## 💭 My Development Philosophy
