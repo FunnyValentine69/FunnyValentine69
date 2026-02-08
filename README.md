@@ -27,6 +27,71 @@
 
 ---
 
+## 📈 Trading Systems (Private)
+
+| Project | Description | Tech |
+|---------|-------------|------|
+| **Robinhood Companion** | Automated options signal system with real-time market scanning & mobile alerts | `Python` `SciPy` `pandas` `pytest` |
+| **Trading Intelligence** | Multi-source market intelligence aggregator with scoring engine | `Python` `requests` `pandas` |
+| **Options Trading Bot** | ML-powered options trading bot with live monitoring dashboard | `R` `tidymodels` `Shiny` `quantmod` |
+
+---
+
+## 🚀 Featured Projects
+
+<table>
+<tr>
+<td style="width:50%;" width="700" valign="top">
+
+### ☕ [Maid Cafe Dating Sim](https://github.com/FunnyValentine69/maidai-v1)
+
+> AI-powered terminal dating game with dynamic NPC conversations
+
+**Features:**
+- 🤖 Local LLM integration for natural dialogue
+- 🎭 Dynamic character personalities
+- 💬 Natural language processing
+- 🎨 Terminal-based gameplay
+
+**Tech Stack:** `Python` `Ollama` `llama3.2`
+
+[![Repo](https://img.shields.io/badge/View_Repo-A855F7?style=for-the-badge&logo=github&logoColor=white)](https://github.com/FunnyValentine69/maidai-v1)
+
+</td>
+<td style="width:50%;" width="500" align="center">
+
+<img src="./maid-cafe-animation.svg" width="500" alt="Maid Cafe Animation"/>
+
+</td>
+</tr>
+<tr>
+<td style="width:50%;" width="700" valign="top">
+
+### 🎙️ [MaidAI v3 — Sakura](https://github.com/FunnyValentine69/maidai-v3)
+
+> Tsundere maid AI with voice chat and bilingual JP/EN dialogue
+
+**Features:**
+- 🗣️ Voice input via mlx-whisper (Apple Silicon optimized)
+- 🎌 Bilingual JRPG-style dialogue (Japanese + English)
+- 🎭 14 dynamic emotion expressions
+- 🧠 Persistent conversation memory
+
+**Tech Stack:** `Python` `Ollama` `Edge TTS` `mlx-whisper`
+
+[![Repo](https://img.shields.io/badge/View_Repo-A855F7?style=for-the-badge&logo=github&logoColor=white)](https://github.com/FunnyValentine69/maidai-v3)
+
+</td>
+<td style="width:50%;" width="500" align="center" valign="center">
+
+<img src="./sakura-demo.svg" width="500" alt="Sakura Conversation Demo"/>
+
+</td>
+</tr>
+</table>
+
+---
+
 ## 💻 Skills
 
 <table>
@@ -106,71 +171,6 @@
 
 ---
 
-## 🚀 Featured Projects
-
-<table>
-<tr>
-<td style="width:50%;" width="700" valign="top">
-
-### ☕ [Maid Cafe Dating Sim](https://github.com/FunnyValentine69/maidai-v1)
-
-> AI-powered terminal dating game with dynamic NPC conversations
-
-**Features:**
-- 🤖 Local LLM integration for natural dialogue
-- 🎭 Dynamic character personalities  
-- 💬 Natural language processing
-- 🎨 Terminal-based gameplay
-
-**Tech Stack:** `Python` `Ollama` `llama3.2`
-
-[![Repo](https://img.shields.io/badge/View_Repo-A855F7?style=for-the-badge&logo=github&logoColor=white)](https://github.com/FunnyValentine69/maidai-v1)
-
-</td>
-<td style="width:50%;" width="500" align="center">
-
-<img src="./maid-cafe-animation.svg" width="500" alt="Maid Cafe Animation"/>
-
-</td>
-</tr>
-<tr>
-<td style="width:50%;" width="700" valign="top">
-
-### 🎙️ [MaidAI v3 — Sakura](https://github.com/FunnyValentine69/maidai-v3)
-
-> Tsundere maid AI with voice chat and bilingual JP/EN dialogue
-
-**Features:**
-- 🗣️ Voice input via mlx-whisper (Apple Silicon optimized)
-- 🎌 Bilingual JRPG-style dialogue (Japanese + English)
-- 🎭 14 dynamic emotion expressions
-- 🧠 Persistent conversation memory
-
-**Tech Stack:** `Python` `Ollama` `Edge TTS` `mlx-whisper`
-
-[![Repo](https://img.shields.io/badge/View_Repo-A855F7?style=for-the-badge&logo=github&logoColor=white)](https://github.com/FunnyValentine69/maidai-v3)
-
-</td>
-<td style="width:50%;" width="500" align="center" valign="center">
-
-<img src="./sakura-demo.svg" width="500" alt="Sakura Conversation Demo"/>
-
-</td>
-</tr>
-</table>
-
----
-
-## 📈 Trading Systems (Private)
-
-| Project | Description | Tech |
-|---------|-------------|------|
-| **Robinhood Companion** | Automated options signal system with real-time market scanning & mobile alerts | `Python` `SciPy` `pandas` `pytest` |
-| **Trading Intelligence** | Multi-source market intelligence aggregator with scoring engine | `Python` `requests` `pandas` |
-| **Options Trading Bot** | ML-powered options trading bot with live monitoring dashboard | `R` `tidymodels` `Shiny` `quantmod` |
-
----
-
 ## 💭 My Development Philosophy
 
 <table>
@@ -214,7 +214,7 @@ class Developer:
 
 <p align="center">
   <a href="https://linkedin.com/in/samson-southafeng" target="_blank">
-    <img 
+    <img
       src="https://img.shields.io/badge/LinkedIn-samson--southafeng-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"
       height="40"
       alt="LinkedIn"
@@ -222,7 +222,7 @@ class Developer:
   </a>
   &nbsp;&nbsp;
   <a href="mailto:taichou@wsu.edu">
-    <img 
+    <img
       src="https://img.shields.io/badge/Email-taichou%40wsu.edu-981E32?style=for-the-badge&logo=gmail&logoColor=white"
       height="40"
       alt="WSU Email"
