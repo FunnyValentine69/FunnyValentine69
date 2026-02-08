@@ -31,7 +31,7 @@
 
 | Project | Description | Tech |
 |---------|-------------|------|
-| **Robinhood Companion** | Automated options signal system with real-time market scanning & mobile alerts | `Python` `SciPy` `pandas` `pytest` |
+| **Trading Companion** | Automated options signal system with real-time market scanning & mobile alerts | `Python` `SciPy` `pandas` `pytest` |
 | **Trading Intelligence** | Multi-source market intelligence aggregator with scoring engine | `Python` `requests` `pandas` |
 | **Options Trading Bot** | ML-powered options trading bot with live monitoring dashboard | `R` `tidymodels` `Shiny` `quantmod` |
 
