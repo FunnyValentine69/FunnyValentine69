@@ -27,7 +27,7 @@
 
 ---
 
-## 📈 Trading Systems (Private)
+## 📈 Trading Systems
 
 | Project | Description | Tech |
 |---------|-------------|------|
@@ -94,10 +94,6 @@
 
 ## 💻 Skills
 
-<table>
-<tr>
-<td style="width:50%;" width="760" valign="center">
-
 **Languages**<br>
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
@@ -145,17 +141,6 @@
 ![Tableau](https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=Tableau&logoColor=white)
 ![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
 
-</td>
-<td style="width:50%;" width="500" valign="center">
-
-<p align="center">
-  <img src="https://github-readme-stats-one-bice.vercel.app/api/top-langs/?username=FunnyValentine69&layout=compact&theme=radical&bg_color=0D1117&text_color=C9D1D9&title_color=A855F7&exclude_repo=samson_portfolio&langs_count=8" alt="Top Languages" />
-</p>
-
-</td>
-</tr>
-</table>
-
 ---
 
 ## 📊 GitHub Stats
@@ -163,6 +148,10 @@
 <p align="center">
   <img src="https://github-readme-stats-one-bice.vercel.app/api?username=FunnyValentine69&show_icons=true&theme=radical&bg_color=0D1117&text_color=C9D1D9&title_color=A855F7&icon_color=A855F7&border_color=30363d" alt="GitHub Stats" width="49%" />
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=FunnyValentine69&theme=radical&background=0D1117&ring=A855F7&fire=A855F7&currStreakLabel=A855F7&border=30363d" alt="GitHub Streak" width="49%" />
+</p>
+
+<p align="center">
+  <img src="https://github-readme-stats-one-bice.vercel.app/api/top-langs/?username=FunnyValentine69&layout=compact&theme=radical&bg_color=0D1117&text_color=C9D1D9&title_color=A855F7&exclude_repo=samson_portfolio&langs_count=8" alt="Top Languages" />
 </p>
 
 <p align="center">
