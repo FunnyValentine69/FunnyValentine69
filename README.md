@@ -13,11 +13,8 @@
 
 - 🏥 **Healthcare → Tech:** 10+ yrs clinical experience in high-pressure environments (ED, alongside physicians)
 - 🎓 **Education:** MPH Epidemiology + MBA Finance & International Business
-- 💻 **Building:** Trading systems, ML models, and AI applications in Python & R
-- 🌍 **Based in:** Vancouver, WA
+- 💻 **Building:** Trading systems, ML models, AI applications & health data tools in Python & R
 - 🎮 **Off-hours:** League of Legends — memorized 150+ champions, their abilities, roles & counterplay
-- 🔭 **Currently exploring:** Trading systems, AI applications & health data tools
-- 🌐 [View My Portfolio](https://funnyvalentine69.github.io/samson_portfolio/)
 
 <p align="center">
   <img src="./intro-animation.gif" width="940" alt="Samson's Journey Animation"/>
