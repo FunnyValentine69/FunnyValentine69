@@ -60,6 +60,11 @@
 ![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
 ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
 ![jQuery](https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white)
+![pytest](https://img.shields.io/badge/pytest-%23ffffff.svg?style=for-the-badge&logo=pytest&logoColor=2f9fe3)
+![Quantitative Finance](https://img.shields.io/badge/Quantitative%20Finance-1a1a2e?style=for-the-badge&logo=cashapp&logoColor=00C853)
+![Algorithmic Trading](https://img.shields.io/badge/Algorithmic%20Trading-0d1117?style=for-the-badge&logo=bitcoin&logoColor=F7931A)
+![Options Pricing](https://img.shields.io/badge/Options%20Pricing-4A154B?style=for-the-badge&logo=greek-letters&logoColor=white)
+![Backtesting](https://img.shields.io/badge/Backtesting-006400?style=for-the-badge&logo=clockify&logoColor=white)
 
 </td>
 <td style="width:50%;" width="500" valign="center">
