@@ -1,2 +1,5 @@
 animation/node_modules/
 animation/frames/
+# Claude Code
+CLAUDE.md
+.claude/
