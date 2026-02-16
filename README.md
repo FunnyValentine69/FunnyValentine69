@@ -22,6 +22,31 @@
 
 ---
 
+## 🔭 What I'm Building
+
+<table>
+<tr>
+<td align="center" width="235">
+<img src="https://img.shields.io/badge/Public_Health_Research-A855F7?style=for-the-badge" alt="Public Health Research" /><br/>
+<sub>Population health analytics, NHANES/BRFSS data pipelines, causal inference for health outcomes</sub>
+</td>
+<td align="center" width="235">
+<img src="https://img.shields.io/badge/AI_%26_Creative-06B6D4?style=for-the-badge" alt="AI & Creative" /><br/>
+<sub>Local LLM apps with real-time voice AI, speech synthesis, generative art pipelines</sub>
+</td>
+<td align="center" width="235">
+<img src="https://img.shields.io/badge/Quantitative_Systems-EC4899?style=for-the-badge" alt="Quantitative Systems" /><br/>
+<sub>Real-time data pipelines, statistical signal processing, automated decision engines</sub>
+</td>
+<td align="center" width="235">
+<img src="https://img.shields.io/badge/Web_Development-FFD700?style=for-the-badge" alt="Web Development" /><br/>
+<sub>Chrome extensions, interactive portfolios, full-stack small business solutions</sub>
+</td>
+</tr>
+</table>
+
+---
+
 ## 📈 Trading Systems
 
 > Systems I've built for quantitative trading and market analysis
@@ -100,6 +125,7 @@
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 ![Bash](https://img.shields.io/badge/bash-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 
 **ML / Data Science**<br>
 ![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white)
@@ -110,6 +136,7 @@
 ![Machine Learning](https://img.shields.io/badge/Machine%20Learning-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
 ![Shiny](https://img.shields.io/badge/Shiny-276DC3?style=for-the-badge&logo=r&logoColor=white)
 ![RMarkdown](https://img.shields.io/badge/RMarkdown-276DC3?style=for-the-badge&logo=r&logoColor=white)
+![NetworkX](https://img.shields.io/badge/NetworkX-4C72B0?style=for-the-badge&logo=python&logoColor=white)
 
 **Trading / Finance**<br>
 ![Quantitative Finance](https://img.shields.io/badge/Quantitative%20Finance-1a1a2e?style=for-the-badge&logo=cashapp&logoColor=00C853)
@@ -122,11 +149,14 @@
 ![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
 ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
 ![jQuery](https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
 
 **DevOps / Tools**<br>
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white)
 ![pytest](https://img.shields.io/badge/pytest-%23ffffff.svg?style=for-the-badge&logo=pytest&logoColor=2f9fe3)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
 
 **AI Tools**<br>
 ![Claude Code](https://img.shields.io/badge/Claude_Code-191919?style=for-the-badge&logo=anthropic&logoColor=white)
@@ -135,10 +165,12 @@
 ![Hugging Face](https://img.shields.io/badge/Hugging%20Face-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)
 ![Stable Diffusion](https://img.shields.io/badge/Stable%20Diffusion-A855F7?style=for-the-badge&logo=pytorch&logoColor=white)
 ![ComfyUI](https://img.shields.io/badge/ComfyUI-222222?style=for-the-badge&logo=comfyui&logoColor=white)
+![Google Gemini](https://img.shields.io/badge/Google_Gemini-8E75B2?style=for-the-badge&logo=googlegemini&logoColor=white)
 
 **Data Visualization**<br>
 ![Tableau](https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=Tableau&logoColor=white)
 ![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
+![Plotly](https://img.shields.io/badge/Plotly-3F4F75?style=for-the-badge&logo=plotly&logoColor=white)
 
 ---
 
