@@ -73,7 +73,7 @@
 - 🔐 Three purpose-specific GitHub Actions OIDC roles, no static cloud credentials
 - 🧾 Digest-pinned, signed images with attestations verified before every AWS apply
 - ⏱️ Owner-bound environment leases with S3 compare-and-swap and a guarded two-stage close
-- 🧪 Terraform, policy, lifecycle, and supply-chain contracts with mutation checks, verified on LocalStack in CI
+- 🧪 Terraform, policy, lifecycle, and supply-chain contracts with mutation checks; the complete preview lifecycle runs on LocalStack
 
 **Tech Stack:** `Terraform` `AWS ECS Fargate` `GitHub Actions` `OIDC` `Cosign` `Conftest` `LocalStack`
 
@@ -82,7 +82,7 @@
 </td>
 <td style="width:50%;" width="500" align="center" valign="center">
 
-<img src="https://raw.githubusercontent.com/FunnyValentine69/orbit-infra/main/docs/assets/orbit-cartoon.svg" width="500" alt="Orbit Infra animated mini-cartoon: an app is guarded, verified, and deliberately stopped before paid deployment"/>
+<img src="https://raw.githubusercontent.com/FunnyValentine69/orbit-infra/70d295427cbdbb6b8c6505c084b41b9965570a1c/docs/assets/orbit-cartoon.svg" width="500" alt="Orbit Infra animated mini-cartoon: an app is guarded, verified, and deliberately stopped before paid deployment"/>
 
 </td>
 </tr>
