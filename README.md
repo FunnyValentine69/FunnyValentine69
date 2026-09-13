@@ -65,6 +65,30 @@
 <tr>
 <td style="width:50%;" width="700" valign="top">
 
+### 🛰️ [Orbit Infra](https://github.com/FunnyValentine69/orbit-infra)
+
+> Ephemeral, near-zero-idle AWS platform with an owner-bound lease lifecycle
+
+**Features:**
+- 🔐 Three purpose-specific GitHub Actions OIDC roles, no static cloud credentials
+- 🧾 Digest-pinned, signed images with attestations verified before every AWS apply
+- ⏱️ Owner-bound environment leases with S3 compare-and-swap and a guarded two-stage close
+- 🧪 Terraform, policy, lifecycle, and supply-chain contracts with mutation checks; the complete preview lifecycle runs on LocalStack
+
+**Tech Stack:** `Terraform` `AWS ECS Fargate` `GitHub Actions` `OIDC` `Cosign` `Conftest` `LocalStack`
+
+[![Repo](https://img.shields.io/badge/View_Repo-A855F7?style=for-the-badge&logo=github&logoColor=white)](https://github.com/FunnyValentine69/orbit-infra)
+
+</td>
+<td style="width:50%;" width="500" align="center" valign="middle">
+
+<img src="https://raw.githubusercontent.com/FunnyValentine69/orbit-infra/70d295427cbdbb6b8c6505c084b41b9965570a1c/docs/assets/orbit-cartoon.svg" width="500" alt="Orbit Infra animated mini-cartoon: an app is guarded, verified, and deliberately stopped before paid deployment"/>
+
+</td>
+</tr>
+<tr>
+<td style="width:50%;" width="700" valign="top">
+
 ### ☕ [Maid Cafe Dating Sim](https://github.com/FunnyValentine69/maidai-v1)
 
 > AI-powered terminal dating game with dynamic NPC conversations
@@ -104,7 +128,7 @@
 [![Repo](https://img.shields.io/badge/View_Repo-A855F7?style=for-the-badge&logo=github&logoColor=white)](https://github.com/FunnyValentine69/maidai-v3)
 
 </td>
-<td style="width:50%;" width="500" align="center" valign="center">
+<td style="width:50%;" width="500" align="center" valign="middle">
 
 <img src="./sakura-demo.svg" width="500" alt="Sakura Conversation Demo"/>
 
