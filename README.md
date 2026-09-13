@@ -80,7 +80,7 @@
 [![Repo](https://img.shields.io/badge/View_Repo-A855F7?style=for-the-badge&logo=github&logoColor=white)](https://github.com/FunnyValentine69/orbit-infra)
 
 </td>
-<td style="width:50%;" width="500" align="center" valign="center">
+<td style="width:50%;" width="500" align="center" valign="middle">
 
 <img src="https://raw.githubusercontent.com/FunnyValentine69/orbit-infra/70d295427cbdbb6b8c6505c084b41b9965570a1c/docs/assets/orbit-cartoon.svg" width="500" alt="Orbit Infra animated mini-cartoon: an app is guarded, verified, and deliberately stopped before paid deployment"/>
 
@@ -128,7 +128,7 @@
 [![Repo](https://img.shields.io/badge/View_Repo-A855F7?style=for-the-badge&logo=github&logoColor=white)](https://github.com/FunnyValentine69/maidai-v3)
 
 </td>
-<td style="width:50%;" width="500" align="center" valign="center">
+<td style="width:50%;" width="500" align="center" valign="middle">
 
 <img src="./sakura-demo.svg" width="500" alt="Sakura Conversation Demo"/>
 
