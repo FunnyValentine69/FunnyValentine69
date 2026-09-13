@@ -82,7 +82,7 @@
 </td>
 <td style="width:50%;" width="500" align="center" valign="middle">
 
-<img src="https://raw.githubusercontent.com/FunnyValentine69/orbit-infra/70d295427cbdbb6b8c6505c084b41b9965570a1c/docs/assets/orbit-cartoon.svg" width="500" alt="Orbit Infra animated mini-cartoon: an app is guarded, verified, and deliberately stopped before paid deployment"/>
+<img src="https://raw.githubusercontent.com/FunnyValentine69/orbit-infra/40eff0e7fac00ad5ae3043f85e269ae175af1ad1/docs/assets/orbit-cartoon.svg" width="500" alt="Orbit Infra animated mini-cartoon: an app is guarded, verified, and deliberately stopped before paid deployment"/>
 
 </td>
 </tr>
